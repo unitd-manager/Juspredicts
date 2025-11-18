@@ -17,7 +17,7 @@ const TrendingSports2 = () => {
   ];
 
   return (
-    <section id="sports" className="relative py-20 bg-gradient-to-b from-gray-900 to-gray-950">
+    <section id="sports" className="relative py-20 bg-gradient-to-b bg-black">
       <div className="pointer-events-none absolute inset-y-0 right-10 h-40 w-40 rounded-xl bg-green-500/20 blur-2xl" />
       <img src={trendingGraphic} alt="Trending graphic" className="pointer-events-none absolute right-6 top-10 w-24 h-24 object-contain drop-shadow-xl" />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -27,7 +27,7 @@ const TrendingSports2 = () => {
         </div>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-5">
           {sports.map((s) => (
-            <div key={s.name} className="rounded-2xl border border-white/10 bg-gray-800/70 p-6 shadow-lg shadow-black/40 ring-1 ring-white/10">
+            <div key={s.name} className="rounded-2xl border border-white/10 bg-gray-900/70 p-6 shadow-lg shadow-black/40 ring-1 ring-white/10">
               <div className="mx-auto mb-6 h-14 w-14 rounded-full border border-white/10 bg-gray-900/60 grid place-items-center">
                 {s.icon ? (
                   <img src={s.icon as string} alt={s.name} className="h-7 w-7 object-contain" />

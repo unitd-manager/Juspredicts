@@ -27,7 +27,8 @@ const Badge = ({ text }: { text: string }) => (
 const UpcomingCards2 = () => {
   return (
     <section id="upcoming" className="relative py-20 bg-gray-900">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(900px_450px_at_0%_50%,rgba(16,185,129,0.18),transparent_100%)]" />
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-10 flex items-center justify-between">
           <div>
             <h2 className="text-4xl font-extrabold tracking-tight text-white">Upcoming <span className="text-green-500">Events</span></h2>
@@ -42,7 +43,10 @@ const UpcomingCards2 = () => {
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
           {events.map((e) => (
-            <Card key={e.title} className="rounded-2xl border border-white/10 bg-gray-800/80 p-6">
+            <Card
+              key={e.title}
+              className="rounded-2xl border border-white/10 bg-gray-900 p-6"
+            >
               <div className="flex items-center justify-between">
                 <Badge text={e.sport} />
                 {e.live ? (

@@ -111,7 +111,7 @@ const MatchPredictionCard = ({ m, highlighted }: { m: MatchItem; highlighted?: b
 );
 
 const LivePredictions2 = () => (
-  <section id="live" className="py-16 bg-gray-900">
+  <section id="live" className="py-16 bg-black">
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
       <div className="mb-10 text-center">
         <h2 className="text-4xl font-extrabold tracking-tight text-white">Live <span className="text-green-500">Match</span> Predictions</h2>

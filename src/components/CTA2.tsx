@@ -1,15 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Sparkles, BarChart3, Trophy } from "lucide-react";
+import readyImg from "@/assets/ready.png";
 
 const CTA2 = () => {
   return (
-    <section className="relative py-24 bg-gray-900">
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute left-1/2 top-10 h-96 w-96 -translate-x-1/2 rounded-full bg-green-500/15 blur-3xl" />
-        <div className="absolute right-6 top-12 h-24 w-24 rounded-xl bg-green-500/20 blur-2xl" />
-      </div>
+    <section className="relative py-24 bg-black">
+      <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(600px_300px_at_50%_50%,rgba(16,185,129,0.22),transparent_70%)]" />
+      <div className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-green-500/20 blur-[120px]" />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           <div className="mx-auto mb-6 grid h-12 w-12 place-items-center rounded-full bg-green-500/20">
             <Sparkles className="h-6 w-6 text-green-500" />
@@ -48,6 +47,7 @@ const CTA2 = () => {
             </div>
           </div>
         </div>
+        <img src={readyImg} alt="Decorative" className="absolute left-6 bottom-6 w-44 sm:w-56 opacity-90 drop-shadow-2xl" />
       </div>
     </section>
   );

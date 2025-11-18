@@ -18,6 +18,14 @@ const Navbar = () => {
             <a href="#events" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Events</a>
             <a href="#leaderboard" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Leaderboard</a>
             <a href="#about" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">About</a>
+            <a
+              href="https://api.predictyourgame.com/swagger-ui/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              API Docs
+            </a>
           </div>
 
           <div className="flex items-center gap-3">

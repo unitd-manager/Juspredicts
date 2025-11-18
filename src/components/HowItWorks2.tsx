@@ -29,7 +29,7 @@ const HowItWorks2 = () => {
   ];
 
   return (
-    <section id="how" className="relative py-20 bg-gray-900">
+    <section id="how" className="relative py-20 bg-black">
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute left-1/2 top-10 h-80 w-80 -translate-x-1/2 rounded-full bg-green-500/10 blur-3xl" />
       </div>
