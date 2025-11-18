@@ -12,21 +12,20 @@ const Hero = () => {
           </div>
 
           <h1 className="mb-6 text-5xl font-bold tracking-tight text-foreground sm:text-6xl lg:text-7xl">
-            Predict the Future,
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"> Trade with Confidence</span>
+            <span className="block text-success">Your Game.</span>
+            <span className="block text-success">Your Call.</span>
           </h1>
 
           <p className="mb-10 text-lg text-muted-foreground sm:text-xl">
-            Join the next generation prediction market platform. Trade on sports. 
-            Real-time data, transparent odds, and instant settlements.
+            Predict your favorite game outcomes with confidence and earn rewards.
           </p>
 
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Button size="lg" className="w-full bg-primary hover:bg-primary/90 sm:w-auto text-base font-semibold px-8 py-6">
-              Start Trading Now
+            <Button size="lg" className="w-full bg-success hover:bg-success/90 sm:w-auto text-base font-semibold px-8 py-6">
+              Start Precting
             </Button>
-            <Button size="lg" variant="outline" className="w-full sm:w-auto text-base font-semibold px-8 py-6">
-              Explore Markets
+            <Button size="lg" variant="outline" className="w-full sm:w-auto text-base font-semibold px-8 py-6 border-success text-success">
+              Learn More
             </Button>
           </div>
 
