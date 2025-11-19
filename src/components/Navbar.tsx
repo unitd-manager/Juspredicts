@@ -1,8 +1,34 @@
 import { Button } from "@/components/ui/button";
+import { Link, useNavigate } from "react-router-dom";
 import { Menu } from "lucide-react";
 import logo from "@/assets/logo.png";
+import { useEffect, useState } from "react";
+import { api } from "@/api/client";
+import { toast } from "@/components/ui/sonner";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(!!localStorage.getItem("auth_token"));
+
+  useEffect(() => {
+    const syncAuth = () => setIsLoggedIn(!!localStorage.getItem("auth_token"));
+    syncAuth();
+    window.addEventListener("storage", syncAuth);
+    return () => window.removeEventListener("storage", syncAuth);
+  }, []);
+
+  const onLogout = async () => {
+    try {
+      await api.post("/user/v1/logout");
+    } catch (_) {}
+    localStorage.removeItem("auth_token");
+    localStorage.removeItem("refresh_token");
+    localStorage.removeItem("token_expiry");
+    localStorage.removeItem("user_profile");
+    setIsLoggedIn(false);
+    toast.success("Logged out");
+    navigate("/");
+  };
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur-md">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -29,8 +55,14 @@ const Navbar = () => {
           </div>
 
           <div className="flex items-center gap-3">
-            <Button variant="ghost" className="hidden sm:inline-flex">Login</Button>
-            <Button className="bg-primary hover:bg-primary/90">Sign Up</Button>
+            {isLoggedIn ? (
+              <Button variant="ghost" className="hidden sm:inline-flex" onClick={onLogout}>Logout</Button>
+            ) : (
+              <>
+                <Button asChild variant="ghost" className="hidden sm:inline-flex"><Link to="/login">Login</Link></Button>
+                <Button className="bg-primary hover:bg-primary/90">Sign Up</Button>
+              </>
+            )}
             <Button variant="ghost" size="icon" className="md:hidden">
               <Menu className="h-5 w-5" />
             </Button>

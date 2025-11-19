@@ -1,9 +1,12 @@
-const API_BASE = (import.meta.env.VITE_API_BASE_URL as string) ?? "https://api.predictyourgame.com";
+const API_BASE =
+  (import.meta.env.VITE_API_BASE_URL as string) ??
+  (import.meta.env.DEV ? "/api" : "https://api.predictyourgame.com");
 
 type JsonBody = Record<string, unknown> | Array<unknown> | undefined;
 
 function buildHeaders(extra?: HeadersInit): HeadersInit {
   const headers: HeadersInit = {
+    Accept: "application/json",
     ...(extra || {}),
   };
   const token = localStorage.getItem("auth_token");
@@ -13,10 +16,16 @@ function buildHeaders(extra?: HeadersInit): HeadersInit {
 
 async function request<T>(path: string, init: RequestInit = {}): Promise<T> {
   const url = path.startsWith("http") ? path : `${API_BASE}${path}`;
-  const res = await fetch(url, {
-    ...init,
-    headers: buildHeaders(init.headers),
-  });
+  let res: Response;
+  try {
+    res = await fetch(url, {
+      ...init,
+      headers: buildHeaders(init.headers),
+    });
+  } catch (err) {
+    const msg = err instanceof Error ? err.message : "Unknown network error";
+    throw new Error(`Network error while contacting API: ${msg}`);
+  }
 
   if (!res.ok) {
     const text = await res.text().catch(() => "");
