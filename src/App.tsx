@@ -7,6 +7,8 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
 import SportsPage from "./pages/SportsPage.tsx";
+import SportsPage1 from "./pages/SportsPage copy.tsx";
+ 
 import GameDetailPage from "./pages/GameDetailPage.tsx";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
 
@@ -22,6 +24,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/sports" element={<SportsPage />} />
+            <Route path="/sports1" element={<SportsPage1 />} />
             <Route path="/game/:id" element={<GameDetailPage />} />
             <Route path="/login" element={<Login />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
