@@ -7,8 +7,11 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
 import SportsPage from "./pages/SportsPage.tsx";
-import SportsPage1 from "./pages/SportsPage copy.tsx";
- 
+import FaqPage from "./pages/faq.tsx";
+import Portfolio from "./pages/Portfolio.tsx";
+import About from "./pages/About";
+import ClanList from "./pages/ClanList";
+import ClanDetail from "./pages/ClanDetail";
 import GameDetailPage from "./pages/GameDetailPage.tsx";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
 
@@ -24,9 +27,13 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/sports" element={<SportsPage />} />
-            <Route path="/sports1" element={<SportsPage1 />} />
+            <Route path="/faq" element={<FaqPage />} />
             <Route path="/game/:id" element={<GameDetailPage />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/clan" element={<ClanList />} />
+            <Route path="/clan/:groupId" element={<ClanDetail />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

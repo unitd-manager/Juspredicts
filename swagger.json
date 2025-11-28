@@ -1,0 +1,6299 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "PUGSVC",
+    "version": "version not set"
+  },
+  "host": "",
+  "basePath": "",
+  "schemes": null,
+  "paths": {
+    "/activity/v1/create": {
+      "post": {
+        "operationId": "ActivityService_Create",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcCreateActivityRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcCreateActivityResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Creates activity for a User for different functions like Clan/Prediction/Rewards etc",
+        "tags": [
+          "ActivityService"
+        ]
+      }
+    },
+    "/activity/v1/getbyuser": {
+      "post": {
+        "operationId": "ActivityService_GetActivityByUser",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcGetActivityRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcGetActivityResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Gets the List of activities for a user",
+        "tags": [
+          "ActivityService"
+        ]
+      }
+    },
+    "/activity/v1/transactions": {
+      "post": {
+        "operationId": "ActivityService_GetMoneyTransactions",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcMoneyTransactionRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcMoneyTransactionResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Gets the Money transactions",
+        "tags": [
+          "ActivityService"
+        ]
+      }
+    },
+    "/balances/v1/add": {
+      "post": {
+        "operationId": "BalancesService_AddBalances",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcAddBalanceRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcAddBalanceResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Adds balance to the authenticated user.",
+        "tags": [
+          "BalancesService"
+        ]
+      }
+    },
+    "/balances/v1/create": {
+      "post": {
+        "operationId": "BalancesService_CreateBalances",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcCreateBalanceRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcCreateBalanceResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Creates balance information for the authenticated user with the amount in the request.",
+        "tags": [
+          "BalancesService"
+        ]
+      }
+    },
+    "/balances/v1/get": {
+      "post": {
+        "operationId": "BalancesService_GetBalances",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcGetBalanceRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcGetBalanceResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Retrieves balance information about the authenticated user.",
+        "tags": [
+          "BalancesService"
+        ]
+      }
+    },
+    "/balances/v1/release": {
+      "post": {
+        "operationId": "BalancesService_Release",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcReleaseBalanceRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcReleaseBalanceResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Release funds from balances to the authenticated user.",
+        "tags": [
+          "BalancesService"
+        ]
+      }
+    },
+    "/balances/v1/remove": {
+      "post": {
+        "operationId": "BalancesService_Remove",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcRemoveBalanceRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcRemoveBalanceResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Remove balance information when user deactivates.",
+        "tags": [
+          "BalancesService"
+        ]
+      }
+    },
+    "/balances/v1/reserve": {
+      "post": {
+        "operationId": "BalancesService_Reserve",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcReserveBalanceRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcReserveBalanceResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Reserve funds from balances to the authenticated user.",
+        "tags": [
+          "BalancesService"
+        ]
+      }
+    },
+    "/balances/v1/reset": {
+      "post": {
+        "operationId": "BalancesService_Reset",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcResetBalanceRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcResetBalanceResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Reset balances information to the authenticated user.",
+        "tags": [
+          "BalancesService"
+        ]
+      }
+    },
+    "/balances/v1/update": {
+      "post": {
+        "operationId": "BalancesService_Update",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcUpdateBalanceRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcUpdateBalanceResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Update balance information to the authenticated user,\nif there is none, creates a new balances information for the user.",
+        "tags": [
+          "BalancesService"
+        ]
+      }
+    },
+    "/event/v0/cricketmatch/webhook": {
+      "post": {
+        "operationId": "EventService_HandleCricketMatchStreaming",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "properties": {},
+              "type": "object"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "tags": [
+          "EventService"
+        ]
+      }
+    },
+    "/event/v1/getevent": {
+      "post": {
+        "operationId": "EventService_GetEvent",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcGetEventRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcGetEventResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "tags": [
+          "EventService"
+        ]
+      }
+    },
+    "/event/v1/listevents": {
+      "post": {
+        "operationId": "EventService_ListEvents",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcListEventsRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcListEventsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "tags": [
+          "EventService"
+        ]
+      }
+    },
+    "/event/v1/searchquestion": {
+      "post": {
+        "operationId": "EventService_SearchQuestion",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcSearchEventQuestionRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcSearchEventQuestionResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Search Event's questions through a wild card search",
+        "tags": [
+          "EventService"
+        ]
+      }
+    },
+    "/event/v1/streameventinfo": {
+      "post": {
+        "operationId": "EventService_StreamEventInfo",
+        "parameters": [
+          {
+            "description": " (streaming inputs)",
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcStreamEventInfoRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.(streaming responses)",
+            "schema": {
+              "properties": {
+                "error": {
+                  "$ref": "#/definitions/googlerpcStatus"
+                },
+                "result": {
+                  "$ref": "#/definitions/pugsvcStreamEventInfoResponse"
+                }
+              },
+              "title": "Stream result of pugsvcStreamEventInfoResponse",
+              "type": "object"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "tags": [
+          "EventService"
+        ]
+      }
+    },
+    "/group/v1/cancelinvite": {
+      "post": {
+        "operationId": "GroupService_GroupCancelInvite",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcGroupCancelInviteRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcGroupCancelInviteResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "User cancels an invitation request sent to other user/users to join his group",
+        "tags": [
+          "GroupService"
+        ]
+      }
+    },
+    "/group/v1/create": {
+      "post": {
+        "operationId": "GroupService_CreateGroup",
+        "parameters": [
+          {
+            "description": "The request message containing the group's data.",
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcCreateGroupRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcCreateGroupResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Creates a new group with details provided by the user",
+        "tags": [
+          "GroupService"
+        ]
+      }
+    },
+    "/group/v1/delete": {
+      "post": {
+        "operationId": "GroupService_DeleteGroup",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcDeleteGroupRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcDeleteGroupResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "User, Owner of the group, deletes the group",
+        "tags": [
+          "GroupService"
+        ]
+      }
+    },
+    "/group/v1/getactivity": {
+      "post": {
+        "operationId": "GroupService_GetGroupActivity",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcGetGroupActivityRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcGetGroupActivityResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Get Clan member's activities in a given Group.",
+        "tags": [
+          "GroupService"
+        ]
+      }
+    },
+    "/group/v1/getgroups": {
+      "post": {
+        "operationId": "GroupService_GetUserGroupInfoList",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcUserGroupInfoRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcUserGroupInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Get User's Group Info List with Group's Top performer and with latest activity timestamp etc",
+        "tags": [
+          "GroupService"
+        ]
+      }
+    },
+    "/group/v1/getinfo": {
+      "post": {
+        "operationId": "GroupService_GetGroupInfo",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcGroupInfoRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcGroupInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Get Group Info, its members and pending members information",
+        "tags": [
+          "GroupService"
+        ]
+      }
+    },
+    "/group/v1/invite": {
+      "post": {
+        "operationId": "GroupService_GroupInvite",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcGroupInviteRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcGroupInviteResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "User creates an invite request for other user/users to join his group",
+        "tags": [
+          "GroupService"
+        ]
+      }
+    },
+    "/group/v1/leaderboard": {
+      "post": {
+        "operationId": "GroupService_GetGroupLeaderboard",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcGetGroupLeaderboardRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcGetGroupLeaderboardResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Get Group Leaderboard information on each user's earnings, prediction accuracy etc.",
+        "tags": [
+          "GroupService"
+        ]
+      }
+    },
+    "/group/v1/leave": {
+      "post": {
+        "operationId": "GroupService_LeaveGroup",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcLeaveGroupRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcLeaveGroupResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "User leaves from a group",
+        "tags": [
+          "GroupService"
+        ]
+      }
+    },
+    "/group/v1/removeuser": {
+      "post": {
+        "operationId": "GroupService_RemoveFromGroup",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcRemoveGroupRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcRemoveGroupResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "User is removed from a group",
+        "tags": [
+          "GroupService"
+        ]
+      }
+    },
+    "/group/v1/update": {
+      "post": {
+        "operationId": "GroupService_UpdateGroup",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcUpdateGroupRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcUpdateGroupResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Updates a group with details provided by the user",
+        "tags": [
+          "GroupService"
+        ]
+      }
+    },
+    "/group/v1/usersearch": {
+      "post": {
+        "operationId": "GroupService_GroupUserSearch",
+        "parameters": [
+          {
+            "description": "Request message for finding users based on their first name or last name or email.",
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcGroupUserSearchRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcGroupUserSearchResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Search users who are members in a given Group.",
+        "tags": [
+          "GroupService"
+        ]
+      }
+    },
+    "/marketdata/v1/get": {
+      "post": {
+        "operationId": "MarketDataService_Get",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcGetMarketDataRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcGetMarketDataResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Gets the market data for a question",
+        "tags": [
+          "MarketDataService"
+        ]
+      }
+    },
+    "/marketdata/v1/getall": {
+      "post": {
+        "operationId": "MarketDataService_GetAll",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcGetAllMarketDataRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcGetAllMarketDataResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Gets the market data for all outcomes of a question",
+        "tags": [
+          "MarketDataService"
+        ]
+      }
+    },
+    "/marketdata/v1/publish": {
+      "post": {
+        "operationId": "MarketDataService_Publish",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcPublishMarketDataRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcPublishMarketDataResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Publishes market data for a question",
+        "tags": [
+          "MarketDataService"
+        ]
+      }
+    },
+    "/misc/v1/checkappupdate": {
+      "post": {
+        "operationId": "MiscellaneousService_CheckForAppUpdate",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcCheckForAppUpdateRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcCheckForAppUpdateResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "tags": [
+          "MiscellaneousService"
+        ]
+      }
+    },
+    "/misc/v1/faq": {
+      "post": {
+        "operationId": "MiscellaneousService_GetFAQInfo",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcGetFAQInfoRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcGetFAQInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "tags": [
+          "MiscellaneousService"
+        ]
+      }
+    },
+    "/misc/v1/getappnotifications": {
+      "post": {
+        "operationId": "MiscellaneousService_GetAppNotifications",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcGetAppNotificationsRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcGetAppNotificationsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "tags": [
+          "MiscellaneousService"
+        ]
+      }
+    },
+    "/misc/v1/getappversions": {
+      "post": {
+        "operationId": "MiscellaneousService_GetAppVersions",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcGetAppVersionsRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcGetAppVersionsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "tags": [
+          "MiscellaneousService"
+        ]
+      }
+    },
+    "/misc/v1/kvideos": {
+      "post": {
+        "operationId": "MiscellaneousService_GetKnowledgeVideosInfo",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcGetKnowledgeVideosInfoRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcGetKnowledgeVideosInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "tags": [
+          "MiscellaneousService"
+        ]
+      }
+    },
+    "/notification/v1/create": {
+      "post": {
+        "operationId": "NotificationService_Create",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcCreateNotificationRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcCreateNotificationResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Creates a notification message and stores in the Datastore for a user.",
+        "tags": [
+          "NotificationService"
+        ]
+      }
+    },
+    "/notification/v1/getlist": {
+      "post": {
+        "operationId": "NotificationService_GetList",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcGetListNotificationRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcGetListNotificationResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Gets the List of read/unread notification messages for a user",
+        "tags": [
+          "NotificationService"
+        ]
+      }
+    },
+    "/notification/v1/markmessages": {
+      "post": {
+        "operationId": "NotificationService_MarkMessages",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcMarkMessagesNotificationRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcMarkMessagesNotificationResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Mark all the notification messages as either 'Read, Deleted or Archived'",
+        "tags": [
+          "NotificationService"
+        ]
+      }
+    },
+    "/notification/v1/unreadcount": {
+      "post": {
+        "operationId": "NotificationService_GetUnreadCount",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcGetUnreadNotificationRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcGetUnreadNotificationResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Get the count of Unread notification messages for a user",
+        "tags": [
+          "NotificationService"
+        ]
+      }
+    },
+    "/notification/v1/update": {
+      "post": {
+        "operationId": "NotificationService_Update",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcUpdateNotificationRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcUpdateNotificationResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Update notification message status and the time at which it is updated",
+        "tags": [
+          "NotificationService"
+        ]
+      }
+    },
+    "/order/v1/cancelorder": {
+      "post": {
+        "operationId": "OrderService_CancelOrder",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcCancelOrderRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcCancelOrderResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "tags": [
+          "OrderService"
+        ]
+      }
+    },
+    "/order/v1/createorder": {
+      "post": {
+        "operationId": "OrderService_CreateOrder",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcCreateOrderRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcCreateOrderResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "tags": [
+          "OrderService"
+        ]
+      }
+    },
+    "/order/v1/details": {
+      "post": {
+        "operationId": "OrderService_GetOrderDetails",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcGetOrderDetailsRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcGetOrderDetailsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "tags": [
+          "OrderService"
+        ]
+      }
+    },
+    "/order/v1/exitorder": {
+      "post": {
+        "operationId": "OrderService_ExitOrder",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcCreateOrderRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcCreateOrderResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "tags": [
+          "OrderService"
+        ]
+      }
+    },
+    "/order/v1/sendtrademsgs": {
+      "post": {
+        "operationId": "OrderService_SendTradeMsgs",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcSendTradeMsgRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcSendTradeMsgResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "tags": [
+          "OrderService"
+        ]
+      }
+    },
+    "/prediction/v1/add": {
+      "post": {
+        "operationId": "PredictionService_AddPrediction",
+        "parameters": [
+          {
+            "description": "Request message to add a prediction for a user.",
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcPredictionAddRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcPredictionAddResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Adds a user prediction for a live or upcoming events",
+        "tags": [
+          "PredictionService"
+        ]
+      }
+    },
+    "/prediction/v1/get": {
+      "post": {
+        "operationId": "PredictionService_GetPredictionInfo",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcPredictionInfoRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcPredictionInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Gets the Prediction information for a user",
+        "tags": [
+          "PredictionService"
+        ]
+      }
+    },
+    "/prediction/v1/getbyid": {
+      "post": {
+        "operationId": "PredictionService_GetPredictionInfoById",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcPredictionInfoByIdRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcPredictionInfoByIdResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Gets the Prediction information By ID for a user",
+        "tags": [
+          "PredictionService"
+        ]
+      }
+    },
+    "/prediction/v1/getbyquestion": {
+      "post": {
+        "operationId": "PredictionService_GetPredictionInfoByQuestion",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcPredictionInfoByQuestionRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcPredictionInfoByQuestionResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Gets the List of Predictions for a list of users",
+        "tags": [
+          "PredictionService"
+        ]
+      }
+    },
+    "/prediction/v1/performance": {
+      "post": {
+        "operationId": "PredictionService_GetPredictionPerformance",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcPredictionPerformanceRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcPredictionPerformanceResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Gets the Prediction performance of a user for his predictions",
+        "tags": [
+          "PredictionService"
+        ]
+      }
+    },
+    "/prediction/v1/search": {
+      "post": {
+        "operationId": "PredictionService_SearchPrediction",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcPredictionSearchRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcPredictionSearchResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Searches User's predictions based on Event name and prediction status",
+        "tags": [
+          "PredictionService"
+        ]
+      }
+    },
+    "/prediction/v1/settle": {
+      "post": {
+        "operationId": "PredictionService_SettlePrediction",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcPredictionSettleRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcPredictionSettleResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Settles a user predictions for a completed event.",
+        "tags": [
+          "PredictionService"
+        ]
+      }
+    },
+    "/user/v1/changepwd": {
+      "post": {
+        "operationId": "UserAccessService_ChangePassword",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcChangePasswordRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcChangePasswordResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Resets a user's password with new password.",
+        "tags": [
+          "UserAccessService"
+        ]
+      }
+    },
+    "/user/v1/deactivate": {
+      "post": {
+        "operationId": "UserAccessService_Deactivate",
+        "parameters": [
+          {
+            "description": "Request to deactivate a user.",
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcDeactivateUserRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcDeactivateUserResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Deletes user account.",
+        "tags": [
+          "UserAccessService"
+        ]
+      }
+    },
+    "/user/v1/editinfo": {
+      "post": {
+        "operationId": "UserService_EditInfo",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcUserEditInfoRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcUserEditInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "tags": [
+          "UserService"
+        ]
+      }
+    },
+    "/user/v1/forgotpwd": {
+      "post": {
+        "operationId": "UserAccessService_ForgotPassword",
+        "parameters": [
+          {
+            "description": "Request to initiate password reset.",
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcForgotPasswordRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcForgotPasswordResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Initiates the process to reset a user's password.",
+        "tags": [
+          "UserAccessService"
+        ]
+      }
+    },
+    "/user/v1/getinfo": {
+      "post": {
+        "operationId": "UserService_GetInfo",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcUserGetInfoRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcUserGetInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Retrieves information about the authenticated user.",
+        "tags": [
+          "UserService"
+        ]
+      }
+    },
+    "/user/v1/getrewards": {
+      "post": {
+        "operationId": "UserService_RewardsInfo",
+        "parameters": [
+          {
+            "description": "Request to get reward categories and rewards information.",
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcRewardsInfoRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcRewardsInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Retrieves reward categories and rewards information for the user.",
+        "tags": [
+          "UserService"
+        ]
+      }
+    },
+    "/user/v1/login": {
+      "post": {
+        "operationId": "UserAccessService_Login",
+        "parameters": [
+          {
+            "description": "Represents a request for user login using email and password.",
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcLoginRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcAuthResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Logs in a user using email and password or Google account.",
+        "tags": [
+          "UserAccessService"
+        ]
+      }
+    },
+    "/user/v1/logout": {
+      "post": {
+        "operationId": "UserAccessService_Logout",
+        "parameters": [
+          {
+            "description": "Request to log out a user.",
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcLogoutRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcLogoutResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Logs out a user, invalidating their access token.",
+        "tags": [
+          "UserAccessService"
+        ]
+      }
+    },
+    "/user/v1/refreshtoken": {
+      "post": {
+        "operationId": "UserAccessService_RefreshToken",
+        "parameters": [
+          {
+            "description": "Request to refresh an access token using a refresh token.",
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcRefreshTokenRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcRefreshTokenResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Refreshes an access token using a refresh token.",
+        "tags": [
+          "UserAccessService"
+        ]
+      }
+    },
+    "/user/v1/resendverification": {
+      "post": {
+        "operationId": "UserAccessService_ResendVerification",
+        "parameters": [
+          {
+            "description": "Request to resend a user's account one-time password.",
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcResendVerificationRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcResendVerificationResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Verifies a user's account using a one-time password.",
+        "tags": [
+          "UserAccessService"
+        ]
+      }
+    },
+    "/user/v1/resetpwd": {
+      "post": {
+        "operationId": "UserAccessService_ResetPassword",
+        "parameters": [
+          {
+            "description": "Request to reset a user's password.",
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcResetPasswordRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcResetPasswordResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Resets a user's password with new password.",
+        "tags": [
+          "UserAccessService"
+        ]
+      }
+    },
+    "/user/v1/sharecontent": {
+      "post": {
+        "operationId": "UserService_ShareContent",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcShareContentRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcShareContentResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "tags": [
+          "UserService"
+        ]
+      }
+    },
+    "/user/v1/signup": {
+      "post": {
+        "operationId": "UserAccessService_SignUp",
+        "parameters": [
+          {
+            "description": "Request to sign up a new user using email and password.",
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcSignUpRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcAuthResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Signs up a new user using email and password or Google account.",
+        "tags": [
+          "UserAccessService"
+        ]
+      }
+    },
+    "/user/v1/storedeviceinfo": {
+      "post": {
+        "operationId": "UserAccessService_StoreDeviceInfo",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcStoreDeviceInfoRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcStoreDeviceInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "tags": [
+          "UserAccessService"
+        ]
+      }
+    },
+    "/user/v1/updatecontacts": {
+      "post": {
+        "operationId": "UserService_ContactDump",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcContactDumpRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcContactDumpResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "tags": [
+          "UserService"
+        ]
+      }
+    },
+    "/user/v1/updateemail": {
+      "post": {
+        "operationId": "UserService_UpdateEmail",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcUpdateEmailRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcUpdateEmailResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "tags": [
+          "UserService"
+        ]
+      }
+    },
+    "/user/v1/verify": {
+      "post": {
+        "operationId": "UserAccessService_VerifyUser",
+        "parameters": [
+          {
+            "description": "Request to verify a user's account using a one-time password.",
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pugsvcVerifyUserRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pugsvcVerifyUserResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "summary": "Verifies a user's account using a one-time password.",
+        "tags": [
+          "UserAccessService"
+        ]
+      }
+    },
+    "/user/v1/{eventId}/stream": {
+      "get": {
+        "operationId": "UserAccessService_StreamSportEvents",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "eventId",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful response.(streaming responses)",
+            "schema": {
+              "properties": {
+                "error": {
+                  "$ref": "#/definitions/googlerpcStatus"
+                },
+                "result": {
+                  "$ref": "#/definitions/pugsvcSportEvent"
+                }
+              },
+              "title": "Stream result of pugsvcSportEvent",
+              "type": "object"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "tags": [
+          "UserAccessService"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "googlerpcStatus": {
+      "properties": {
+        "code": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "details": {
+          "items": {
+            "$ref": "#/definitions/protobufAny",
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "message": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "protobufAny": {
+      "additionalProperties": {},
+      "description": "`Any` contains an arbitrary serialized protocol buffer message along with a\nURL that describes the type of the serialized message.\n\nProtobuf library provides support to pack/unpack Any values in the form\nof utility functions or additional generated methods of the Any type.\n\nExample 1: Pack and unpack a message in C++.\n\n    Foo foo = ...;\n    Any any;\n    any.PackFrom(foo);\n    ...\n    if (any.UnpackTo(\u0026foo)) {\n      ...\n    }\n\nExample 2: Pack and unpack a message in Java.\n\n    Foo foo = ...;\n    Any any = Any.pack(foo);\n    ...\n    if (any.is(Foo.class)) {\n      foo = any.unpack(Foo.class);\n    }\n    // or ...\n    if (any.isSameTypeAs(Foo.getDefaultInstance())) {\n      foo = any.unpack(Foo.getDefaultInstance());\n    }\n\n Example 3: Pack and unpack a message in Python.\n\n    foo = Foo(...)\n    any = Any()\n    any.Pack(foo)\n    ...\n    if any.Is(Foo.DESCRIPTOR):\n      any.Unpack(foo)\n      ...\n\n Example 4: Pack and unpack a message in Go\n\n     foo := \u0026pb.Foo{...}\n     any, err := anypb.New(foo)\n     if err != nil {\n       ...\n     }\n     ...\n     foo := \u0026pb.Foo{}\n     if err := any.UnmarshalTo(foo); err != nil {\n       ...\n     }\n\nThe pack methods provided by protobuf library will by default use\n'type.googleapis.com/full.type.name' as the type URL and the unpack\nmethods only use the fully qualified type name after the last '/'\nin the type URL, for example \"foo.bar.com/x/y.z\" will yield type\nname \"y.z\".\n\nJSON\n====\nThe JSON representation of an `Any` value uses the regular\nrepresentation of the deserialized, embedded message, with an\nadditional field `@type` which contains the type URL. Example:\n\n    package google.profile;\n    message Person {\n      string first_name = 1;\n      string last_name = 2;\n    }\n\n    {\n      \"@type\": \"type.googleapis.com/google.profile.Person\",\n      \"firstName\": \u003cstring\u003e,\n      \"lastName\": \u003cstring\u003e\n    }\n\nIf the embedded message type is well-known and has a custom JSON\nrepresentation, that representation will be embedded adding a field\n`value` which holds the custom JSON in addition to the `@type`\nfield. Example (for message [google.protobuf.Duration][]):\n\n    {\n      \"@type\": \"type.googleapis.com/google.protobuf.Duration\",\n      \"value\": \"1.212s\"\n    }",
+      "properties": {
+        "@type": {
+          "description": "A URL/resource name that uniquely identifies the type of the serialized\nprotocol buffer message. This string must contain at least\none \"/\" character. The last segment of the URL's path must represent\nthe fully qualified name of the type (as in\n`path/google.protobuf.Duration`). The name should be in a canonical form\n(e.g., leading \".\" is not accepted).\n\nIn practice, teams usually precompile into the binary all types that they\nexpect it to use in the context of Any. However, for URLs which use the\nscheme `http`, `https`, or no scheme, one can optionally set up a type\nserver that maps type URLs to message definitions as follows:\n\n* If no scheme is provided, `https` is assumed.\n* An HTTP GET on the URL must yield a [google.protobuf.Type][]\n  value in binary format, or produce an error.\n* Applications are allowed to cache lookup results based on the\n  URL, or have them precompiled into a binary to avoid any\n  lookup. Therefore, binary compatibility needs to be preserved\n  on changes to types. (Use versioned type names to manage\n  breaking changes.)\n\nNote: this functionality is not currently available in the official\nprotobuf release, and it is not used for type URLs beginning with\ntype.googleapis.com. As of May 2023, there are no widely used type server\nimplementations and no plans to implement one.\n\nSchemes other than `http`, `https` (or the empty scheme) might be\nused with implementation specific semantics.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "protobufNullValue": {
+      "default": "NULL_VALUE",
+      "description": "`NullValue` is a singleton enumeration to represent the null value for the\n`Value` type union.\n\nThe JSON representation for `NullValue` is JSON `null`.\n\n - NULL_VALUE: Null value.",
+      "enum": [
+        "NULL_VALUE"
+      ],
+      "type": "string"
+    },
+    "pugsvcActivityInfo": {
+      "properties": {
+        "activityAmount": {
+          "type": "string"
+        },
+        "activityDescription": {
+          "type": "string"
+        },
+        "activityId": {
+          "type": "string"
+        },
+        "activitySubType": {
+          "$ref": "#/definitions/pugsvcActivitySubTypeCdEnum"
+        },
+        "activityTime": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "activityType": {
+          "$ref": "#/definitions/pugsvcActivityTypeCdEnum"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcActivitySubTypeCdEnum": {
+      "default": "ACTIVITY_SUBTYPE_UNSPECIFIED",
+      "enum": [
+        "ACTIVITY_SUBTYPE_UNSPECIFIED",
+        "ACTIVITY_SUBTYPE_PREDICTION_PREDICT",
+        "ACTIVITY_SUBTYPE_PREDICTION_EXIT",
+        "ACTIVITY_SUBTYPE_PREDICTION_WON",
+        "ACTIVITY_SUBTYPE_PREDICTION_LOST",
+        "ACTIVITY_SUBTYPE_PREDICTION_EXIT_LOSS",
+        "ACTIVITY_SUBTYPE_PREDICTION_EXIT_GAIN",
+        "ACTIVITY_SUBTYPE_CLAN_CREATE",
+        "ACTIVITY_SUBTYPE_CLAN_UPDATE",
+        "ACTIVITY_SUBTYPE_CLAN_DELETE",
+        "ACTIVITY_SUBTYPE_CLAN_INVITE",
+        "ACTIVITY_SUBTYPE_CLAN_CXLINVITE",
+        "ACTIVITY_SUBTYPE_CLAN_ADDMEMBER",
+        "ACTIVITY_SUBTYPE_CLAN_REMOVEMEMBER",
+        "ACTIVITY_SUBTYPE_CLAN_LEAVE",
+        "ACTIVITY_SUBTYPE_CLAN_JOIN",
+        "ACTIVITY_SUBTYPE_BALANCE_ADJUST",
+        "ACTIVITY_SUBTYPE_BALANCE_RESET",
+        "ACTIVITY_SUBTYPE_ORDER_PLACED",
+        "ACTIVITY_SUBTYPE_ORDER_CANCELLED",
+        "ACTIVITY_SUBTYPE_ORDER_EXECUTED",
+        "ACTIVITY_SUBTYPE_ORDER_PARTIALLY_EXECUTED",
+        "ACTIVITY_SUBTYPE_ACCT_LOCKED",
+        "ACTIVITY_SUBTYPE_ACCT_UNLOCKED",
+        "ACTIVITY_SUBTYPE_REWARDS_LOGIN",
+        "ACTIVITY_SUBTYPE_REWARDS_PERFORMANCE"
+      ],
+      "type": "string"
+    },
+    "pugsvcActivityTypeCdEnum": {
+      "default": "ACTIVITY_TYPE_UNSPECIFIED",
+      "enum": [
+        "ACTIVITY_TYPE_UNSPECIFIED",
+        "ACTIVITY_TYPE_PREDICTION",
+        "ACTIVITY_TYPE_CLAN",
+        "ACTIVITY_TYPE_BALANCE",
+        "ACTIVITY_TYPE_ACCOUNT",
+        "ACTIVITY_TYPE_ORDER",
+        "ACTIVITY_TYPE_REWARDS"
+      ],
+      "type": "string"
+    },
+    "pugsvcAddBalanceRequest": {
+      "properties": {
+        "amount": {
+          "type": "string"
+        },
+        "creditDebit": {
+          "$ref": "#/definitions/pugsvcCreditDebitCdEnum"
+        }
+      },
+      "title": "Request to add balances for a user",
+      "type": "object"
+    },
+    "pugsvcAddBalanceResponse": {
+      "properties": {
+        "newAvailableBalance": {
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "title": "Response of Add Balances Request",
+      "type": "object"
+    },
+    "pugsvcAppNotificationInfo": {
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "expiresAt": {
+          "format": "uint64",
+          "type": "string"
+        },
+        "frequencyInMins": {
+          "format": "uint64",
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "startsAt": {
+          "format": "uint64",
+          "type": "string"
+        },
+        "type": {
+          "$ref": "#/definitions/pugsvcAppNotificationTypeEnum"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcAppNotificationTypeEnum": {
+      "default": "UNSPECIFIED",
+      "enum": [
+        "UNSPECIFIED",
+        "RELEASENOTES",
+        "GENERAL",
+        "CLAN"
+      ],
+      "type": "string"
+    },
+    "pugsvcAuthResponse": {
+      "description": "Response containing authentication details for the user.",
+      "properties": {
+        "accessToken": {
+          "title": "Access token to authenticate API requests",
+          "type": "string"
+        },
+        "refreshToken": {
+          "title": "Refresh token to obtain new access tokens",
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/definitions/typesStatus",
+          "title": "Status of the operation"
+        },
+        "tokenExpiry": {
+          "format": "date-time",
+          "title": "Expiry time for the access token",
+          "type": "string"
+        },
+        "userProfile": {
+          "$ref": "#/definitions/pugsvcUserLoginProfile",
+          "title": "Profile of the logged-in user"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcCancelOrderRequest": {
+      "properties": {
+        "orderId": {
+          "title": "ID of the order to cancel",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcCancelOrderResponse": {
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/typesStatus",
+          "title": "Status of the order cancellation"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcChangePasswordRequest": {
+      "properties": {
+        "newPassword": {
+          "title": "New password for the user",
+          "type": "string"
+        },
+        "oldPassword": {
+          "title": "User's current password",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcChangePasswordResponse": {
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/typesStatus",
+          "title": "Status of the operation"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcCheckForAppUpdateRequest": {
+      "properties": {
+        "appVersion": {
+          "type": "string"
+        },
+        "os": {
+          "$ref": "#/definitions/typesDeviceOSypeEnum"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcCheckForAppUpdateResponse": {
+      "properties": {
+        "appVersion": {
+          "$ref": "#/definitions/typesAppVersionInfo"
+        },
+        "requiresForceUpdate": {
+          "type": "boolean"
+        },
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcContact": {
+      "properties": {
+        "displayName": {
+          "type": "string"
+        },
+        "emails": {
+          "items": {
+            "$ref": "#/definitions/pugsvcContactEmail",
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "phoneNumbers": {
+          "items": {
+            "$ref": "#/definitions/pugsvcContactPhoneNumber",
+            "type": "object"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcContactDumpRequest": {
+      "properties": {
+        "contacts": {
+          "items": {
+            "$ref": "#/definitions/pugsvcContact",
+            "type": "object"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcContactDumpResponse": {
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcContactEmail": {
+      "properties": {
+        "address": {
+          "type": "string"
+        },
+        "type": {
+          "$ref": "#/definitions/pugsvcEmailTypeEnum"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcContactPhoneNumber": {
+      "properties": {
+        "countryCode": {
+          "type": "string"
+        },
+        "number": {
+          "type": "string"
+        },
+        "type": {
+          "$ref": "#/definitions/pugsvcPhoneTypeEnum"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcCreateActivityRequest": {
+      "properties": {
+        "activitySubType": {
+          "$ref": "#/definitions/pugsvcActivitySubTypeCdEnum"
+        },
+        "activityTime": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "activityType": {
+          "$ref": "#/definitions/pugsvcActivityTypeCdEnum"
+        },
+        "amount": {
+          "type": "string"
+        },
+        "eventId": {
+          "type": "string"
+        },
+        "groupId": {
+          "type": "string"
+        },
+        "groupMemberId": {
+          "type": "string"
+        },
+        "questionId": {
+          "type": "string"
+        },
+        "userId": {
+          "type": "string"
+        }
+      },
+      "title": "Request message for Creating Activity",
+      "type": "object"
+    },
+    "pugsvcCreateActivityResponse": {
+      "properties": {
+        "activityId": {
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "title": "Response message for the created Activity",
+      "type": "object"
+    },
+    "pugsvcCreateBalanceRequest": {
+      "properties": {
+        "amount": {
+          "type": "string"
+        },
+        "creditDebit": {
+          "$ref": "#/definitions/pugsvcCreditDebitCdEnum"
+        }
+      },
+      "title": "Request to create balances for a user",
+      "type": "object"
+    },
+    "pugsvcCreateBalanceResponse": {
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcCreateGroupRequest": {
+      "description": "The request message containing the group's data.",
+      "properties": {
+        "alias": {
+          "title": "An alias for the group",
+          "type": "string"
+        },
+        "groupName": {
+          "title": "The name of the group",
+          "type": "string"
+        },
+        "join": {
+          "title": "user who is creating the group will join the group based on this flag",
+          "type": "boolean"
+        },
+        "mode": {
+          "$ref": "#/definitions/pugsvcGroupModeEnum",
+          "title": "The mode of the group, default to PRIVATE if not specified"
+        },
+        "userId": {
+          "title": "The user who is creating the group",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcCreateGroupResponse": {
+      "description": "The response message containing the group ID.",
+      "properties": {
+        "groupId": {
+          "title": "The unique identifier of the created group",
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcCreateNotificationRequest": {
+      "properties": {
+        "entityId": {
+          "type": "string"
+        },
+        "entityType": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "userId": {
+          "type": "string"
+        }
+      },
+      "title": "Request message for Creating Notification",
+      "type": "object"
+    },
+    "pugsvcCreateNotificationResponse": {
+      "properties": {
+        "notificationId": {
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "title": "Response message for the created Notification",
+      "type": "object"
+    },
+    "pugsvcCreateOrderRequest": {
+      "properties": {
+        "amount": {
+          "title": "Amount the user is betting",
+          "type": "string"
+        },
+        "eventId": {
+          "title": "ID of the event related to the bet",
+          "type": "string"
+        },
+        "modifiers": {
+          "$ref": "#/definitions/pugsvcPredictionModifiers",
+          "title": "Additional adjustments for the bet"
+        },
+        "orderId": {
+          "title": "ID of the order",
+          "type": "string"
+        },
+        "predictionDetails": {
+          "$ref": "#/definitions/pugsvcPredictionDetails",
+          "title": "Detailed prediction information"
+        },
+        "questionId": {
+          "title": "ID of the prediction question (foreign key reference to PredictionQuestion)",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcCreateOrderResponse": {
+      "properties": {
+        "orderId": {
+          "title": "ID of the created order",
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/definitions/typesStatus",
+          "title": "Status of the order creation"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcCreditDebitCdEnum": {
+      "default": "TXN_UNSPECIFIED",
+      "enum": [
+        "TXN_UNSPECIFIED",
+        "TXN_CREDIT",
+        "TXN_DEBIT"
+      ],
+      "type": "string"
+    },
+    "pugsvcCricketEvent": {
+      "properties": {
+        "eventFormat": {
+          "$ref": "#/definitions/pugsvcCricketMatchFormatEnum",
+          "title": "Cricket Match Format"
+        },
+        "sportEventType": {
+          "$ref": "#/definitions/pugsvcSportEventTypeEnum",
+          "title": "Sport Event type"
+        }
+      },
+      "title": "Cricket Event information",
+      "type": "object"
+    },
+    "pugsvcCricketMatchFormatEnum": {
+      "default": "CRICKET_MATCH_FORMAT_UNSPECIFIED",
+      "enum": [
+        "CRICKET_MATCH_FORMAT_UNSPECIFIED",
+        "CRICKET_MATCH_FORMAT_ODI",
+        "CRICKET_MATCH_FORMAT_T20",
+        "CRICKET_MATCH_FORMAT_TEST"
+      ],
+      "title": "- CRICKET_MATCH_FORMAT_UNSPECIFIED: Unspecified\n - CRICKET_MATCH_FORMAT_ODI: ODI\n - CRICKET_MATCH_FORMAT_T20: T20\n - CRICKET_MATCH_FORMAT_TEST: Test Match",
+      "type": "string"
+    },
+    "pugsvcCricketRecurringEvent": {
+      "properties": {
+        "gender": {
+          "$ref": "#/definitions/pugsvcGenderEnum",
+          "title": "Gender"
+        },
+        "tournamentType": {
+          "$ref": "#/definitions/pugsvcCricketMatchFormatEnum",
+          "title": "Match Format"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcCricketTeam": {
+      "title": "Nothing as of now. Can be added in tthe future",
+      "type": "object"
+    },
+    "pugsvcDeactivateUserRequest": {
+      "description": "Request to deactivate a user.",
+      "type": "object"
+    },
+    "pugsvcDeactivateUserResponse": {
+      "description": "Response indicating success or failure of the deactivate request.",
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/typesStatus",
+          "title": "Status of the operation"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcDeleteGroupRequest": {
+      "properties": {
+        "groupId": {
+          "title": "Group to be removed from",
+          "type": "string"
+        },
+        "userId": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcDeleteGroupResponse": {
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "title": "Response after deleting the group premanently",
+      "type": "object"
+    },
+    "pugsvcEmailLoginRequest": {
+      "description": "Request to log in using email and password.",
+      "properties": {
+        "email": {
+          "title": "User's email address",
+          "type": "string"
+        },
+        "password": {
+          "title": "User's password",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcEmailSignupRequest": {
+      "description": "Request to sign up a new user using an email.",
+      "properties": {
+        "password": {
+          "title": "User's password",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcEmailTypeEnum": {
+      "default": "EMAIL_TYPE_UNSPECIFIED",
+      "enum": [
+        "EMAIL_TYPE_UNSPECIFIED",
+        "EMAIL_TYPE_PERSONAL",
+        "EMAIL_TYPE_WORK",
+        "EMAIL_TYPE_OTHER"
+      ],
+      "type": "string"
+    },
+    "pugsvcEvent": {
+      "properties": {
+        "category": {
+          "$ref": "#/definitions/pugsvcEventCategoryEnum",
+          "title": "Event category"
+        },
+        "description": {
+          "title": "Event description",
+          "type": "string"
+        },
+        "endDate": {
+          "format": "int64",
+          "title": "Event End Time",
+          "type": "string"
+        },
+        "events": {
+          "items": {
+            "$ref": "#/definitions/pugsvcEvent",
+            "type": "object"
+          },
+          "title": "Child events for this parent event if applicable",
+          "type": "array"
+        },
+        "id": {
+          "title": "Unique event id",
+          "type": "string"
+        },
+        "liveData": {
+          "type": "string"
+        },
+        "metadata": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Additional metadata related to the event",
+          "type": "object"
+        },
+        "name": {
+          "title": "Name of the event",
+          "type": "string"
+        },
+        "parentEventId": {
+          "title": "Parent Event id if exists",
+          "type": "string"
+        },
+        "parentEventInfo": {
+          "$ref": "#/definitions/pugsvcEvent",
+          "title": "Parent Event info if exists"
+        },
+        "recurringEvent": {
+          "$ref": "#/definitions/pugsvcRecurringEvent",
+          "title": "Recurring event info"
+        },
+        "result": {
+          "type": "string"
+        },
+        "shortName": {
+          "title": "Short name for the event",
+          "type": "string"
+        },
+        "sportEvent": {
+          "$ref": "#/definitions/pugsvcSportsEvent",
+          "title": "Specific to sports based event information"
+        },
+        "startDate": {
+          "format": "int64",
+          "title": "Event Start Time",
+          "type": "string"
+        },
+        "stats": {
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/definitions/pugsvcEventStatusEnum",
+          "title": "Status of the event"
+        },
+        "tags": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Additional tags related to the event",
+          "type": "array"
+        },
+        "venues": {
+          "items": {
+            "$ref": "#/definitions/pugsvcEventLocation",
+            "type": "object"
+          },
+          "title": "Event Locations",
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcEventCategoryEnum": {
+      "default": "EVENT_CATEGORY_UNSPECIFIED",
+      "enum": [
+        "EVENT_CATEGORY_UNSPECIFIED",
+        "EVENT_CATEGORY_SPORTS",
+        "EVENT_CATEGORY_POLITICS",
+        "EVENT_CATEGORY_FINANCE"
+      ],
+      "title": "- EVENT_CATEGORY_UNSPECIFIED: Unspecified\n - EVENT_CATEGORY_SPORTS: Sports Based Event\n - EVENT_CATEGORY_POLITICS: Politics based event\n - EVENT_CATEGORY_FINANCE: Financial based event",
+      "type": "string"
+    },
+    "pugsvcEventHierarchyEnum": {
+      "default": "ALL_EVENTS",
+      "enum": [
+        "ALL_EVENTS",
+        "PARENT_EVENT",
+        "CHILD_EVENT"
+      ],
+      "type": "string"
+    },
+    "pugsvcEventLocation": {
+      "properties": {
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "id": {
+          "title": "Event Venue ID",
+          "type": "string"
+        },
+        "imageUrl": {
+          "title": "Image info",
+          "type": "string"
+        },
+        "locationType": {
+          "$ref": "#/definitions/pugsvcEventLocationTypeEnum",
+          "title": "Event Venue Type"
+        },
+        "metadata": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Additional metadata",
+          "type": "object"
+        },
+        "name": {
+          "title": "Name of the Venume",
+          "type": "string"
+        },
+        "shortName": {
+          "title": "Short name of the Venume",
+          "type": "string"
+        }
+      },
+      "title": "Event Venue Location",
+      "type": "object"
+    },
+    "pugsvcEventLocationTypeEnum": {
+      "default": "EVENTVENUE_TYPE_UNSPECIFIED",
+      "enum": [
+        "EVENTVENUE_TYPE_UNSPECIFIED",
+        "EVENTVENUE_TYPE_COUNTRY",
+        "EVENTVENUE_TYPE_CITY"
+      ],
+      "title": "- EVENTVENUE_TYPE_UNSPECIFIED: Unspecified\n - EVENTVENUE_TYPE_COUNTRY: Country\n - EVENTVENUE_TYPE_CITY: City",
+      "type": "string"
+    },
+    "pugsvcEventStatusEnum": {
+      "default": "EVENT_STATUS_UNSPECIFIED",
+      "enum": [
+        "EVENT_STATUS_UNSPECIFIED",
+        "EVENT_STATUS_UPCOMING",
+        "EVENT_STATUS_ACTIVE",
+        "EVENT_STATUS_CLOSED",
+        "EVENT_STATUS_CANCELLED"
+      ],
+      "title": "- EVENT_STATUS_UNSPECIFIED: Unspecified\n - EVENT_STATUS_UPCOMING: Upcoming Event\n - EVENT_STATUS_ACTIVE: Event is active currently\n - EVENT_STATUS_CLOSED: Event is closed\n - EVENT_STATUS_CANCELLED: Event is canceled",
+      "type": "string"
+    },
+    "pugsvcFAQInfo": {
+      "properties": {
+        "answer": {
+          "type": "string"
+        },
+        "category": {
+          "$ref": "#/definitions/pugsvcFAQInfoCategoryEnum"
+        },
+        "question": {
+          "type": "string"
+        },
+        "sequence": {
+          "format": "int64",
+          "type": "integer"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcFAQInfoCategoryEnum": {
+      "default": "UNSPECIFIED",
+      "enum": [
+        "UNSPECIFIED",
+        "GENERAL"
+      ],
+      "type": "string"
+    },
+    "pugsvcForgotPasswordRequest": {
+      "description": "Request to initiate password reset.",
+      "properties": {
+        "email": {
+          "title": "User's email address",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcForgotPasswordResponse": {
+      "description": "Response indicating success or failure of the forgot password request.",
+      "properties": {
+        "accessToken": {
+          "title": "New access token",
+          "type": "string"
+        },
+        "refreshToken": {
+          "title": "New refresh token",
+          "type": "string"
+        },
+        "refreshTokenExpiry": {
+          "format": "date-time",
+          "title": "Expiry time for the new refresh token",
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/definitions/typesStatus",
+          "title": "Status of the operation"
+        },
+        "tokenExpiry": {
+          "format": "date-time",
+          "title": "Expiry time for the new access token",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcGenderEnum": {
+      "default": "GENDER_UNSPECIFIED",
+      "enum": [
+        "GENDER_UNSPECIFIED",
+        "GENDER_MALE",
+        "GENDER_FEMALE"
+      ],
+      "title": "- GENDER_UNSPECIFIED: Unspecified\n - GENDER_MALE: Male\n - GENDER_FEMALE: Female",
+      "type": "string"
+    },
+    "pugsvcGetActivityRequest": {
+      "properties": {
+        "pageRequest": {
+          "$ref": "#/definitions/typesPageInfo"
+        }
+      },
+      "title": "Request message for Getting activities for a user",
+      "type": "object"
+    },
+    "pugsvcGetActivityResponse": {
+      "properties": {
+        "activities": {
+          "items": {
+            "$ref": "#/definitions/pugsvcActivityInfo",
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "activitiesCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "pageInfo": {
+          "$ref": "#/definitions/typesMeta"
+        },
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "title": "Response message for Getting activities for a user",
+      "type": "object"
+    },
+    "pugsvcGetAllMarketDataRequest": {
+      "properties": {
+        "questionId": {
+          "type": "string"
+        }
+      },
+      "title": "Request message for Getting all outcome's market data for a question",
+      "type": "object"
+    },
+    "pugsvcGetAllMarketDataResponse": {
+      "properties": {
+        "marketData": {
+          "items": {
+            "$ref": "#/definitions/pugsvcMarketDataInfo",
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "outcomeCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "title": "Response message for Getting market data for a question",
+      "type": "object"
+    },
+    "pugsvcGetAppNotificationsRequest": {
+      "type": "object"
+    },
+    "pugsvcGetAppNotificationsResponse": {
+      "properties": {
+        "notifications": {
+          "items": {
+            "$ref": "#/definitions/pugsvcAppNotificationInfo",
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcGetAppVersionsRequest": {
+      "properties": {
+        "os": {
+          "$ref": "#/definitions/typesDeviceOSypeEnum"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcGetAppVersionsResponse": {
+      "properties": {
+        "appVersions": {
+          "items": {
+            "$ref": "#/definitions/typesAppVersionInfo",
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcGetBalanceRequest": {
+      "title": "Request to get balance information",
+      "type": "object"
+    },
+    "pugsvcGetBalanceResponse": {
+      "properties": {
+        "availableBalance": {
+          "title": "Net balance for the user after holds/reservations",
+          "type": "string"
+        },
+        "currentBalance": {
+          "title": "Current balance of the user excluding held amount for predictions",
+          "type": "string"
+        },
+        "reservedAmount": {
+          "title": "The amount reserved or held for open predictions",
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/definitions/typesStatus",
+          "title": "Status of the operation"
+        },
+        "timesTamp": {
+          "format": "date-time",
+          "title": "Timestamp of when this balance information was retrieved",
+          "type": "string"
+        },
+        "todaysPerformance": {
+          "title": "User's total gain from his today's predictions",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcGetEventRequest": {
+      "properties": {
+        "childEventsPageMarker": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "childEventsPageSize": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "childEventsStatus": {
+          "items": {
+            "$ref": "#/definitions/pugsvcEventStatusEnum"
+          },
+          "type": "array"
+        },
+        "eventId": {
+          "type": "string"
+        },
+        "getChildEvents": {
+          "type": "boolean"
+        },
+        "getEventQuestions": {
+          "type": "boolean"
+        },
+        "getParentEvent": {
+          "type": "boolean"
+        },
+        "getRecurringEvent": {
+          "type": "boolean"
+        },
+        "questionsPageInfo": {
+          "$ref": "#/definitions/typesPageInfo"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcGetEventResponse": {
+      "properties": {
+        "event": {
+          "$ref": "#/definitions/pugsvcEvent"
+        },
+        "questionPageInfo": {
+          "$ref": "#/definitions/typesMeta"
+        },
+        "questions": {
+          "items": {
+            "$ref": "#/definitions/pugsvcQuestion",
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "questionsCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcGetFAQInfoRequest": {
+      "type": "object"
+    },
+    "pugsvcGetFAQInfoResponse": {
+      "properties": {
+        "faqs": {
+          "items": {
+            "$ref": "#/definitions/pugsvcFAQInfo",
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcGetGroupActivityRequest": {
+      "properties": {
+        "eventStatus": {
+          "$ref": "#/definitions/pugsvcEventStatusEnum"
+        },
+        "groupId": {
+          "type": "string"
+        },
+        "pageRequest": {
+          "$ref": "#/definitions/typesPageInfo"
+        }
+      },
+      "title": "Request message for Group Activities",
+      "type": "object"
+    },
+    "pugsvcGetGroupActivityResponse": {
+      "properties": {
+        "activities": {
+          "items": {
+            "$ref": "#/definitions/pugsvcGroupActivityInfo",
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "activityCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "pageInfo": {
+          "$ref": "#/definitions/typesMeta"
+        },
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "title": "Response mesage for Group Activities",
+      "type": "object"
+    },
+    "pugsvcGetGroupLeaderboardRequest": {
+      "properties": {
+        "groupId": {
+          "title": "Group to leave",
+          "type": "string"
+        },
+        "pageRequest": {
+          "$ref": "#/definitions/typesPageInfo"
+        }
+      },
+      "title": "Request message for getting a group's leaderboard",
+      "type": "object"
+    },
+    "pugsvcGetGroupLeaderboardResponse": {
+      "properties": {
+        "groupUserCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "groupUserInfo": {
+          "items": {
+            "$ref": "#/definitions/pugsvcGroupUserPredictionInfo",
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "pageInfo": {
+          "$ref": "#/definitions/typesMeta"
+        },
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "title": "Response after leaving the group",
+      "type": "object"
+    },
+    "pugsvcGetKnowledgeVideosInfoRequest": {
+      "type": "object"
+    },
+    "pugsvcGetKnowledgeVideosInfoResponse": {
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        },
+        "videos": {
+          "items": {
+            "$ref": "#/definitions/pugsvcKnowledgeVideoInfo",
+            "type": "object"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcGetListNotificationRequest": {
+      "properties": {
+        "pageRequest": {
+          "$ref": "#/definitions/typesPageInfo"
+        },
+        "status": {
+          "items": {
+            "$ref": "#/definitions/pugsvcNotificationStatusCdEnum"
+          },
+          "type": "array"
+        }
+      },
+      "title": "Request message for Getting notifications for a user",
+      "type": "object"
+    },
+    "pugsvcGetListNotificationResponse": {
+      "properties": {
+        "notifications": {
+          "items": {
+            "$ref": "#/definitions/pugsvcNotificationInfo",
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "notificationsCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "pageInfo": {
+          "$ref": "#/definitions/typesMeta"
+        },
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "title": "Response message for Getting notifications for a user",
+      "type": "object"
+    },
+    "pugsvcGetMarketDataRequest": {
+      "properties": {
+        "outcome": {
+          "type": "string"
+        },
+        "questionId": {
+          "type": "string"
+        }
+      },
+      "title": "Request message for Getting market data for a question",
+      "type": "object"
+    },
+    "pugsvcGetMarketDataResponse": {
+      "properties": {
+        "marketData": {
+          "$ref": "#/definitions/pugsvcMarketDataInfo"
+        },
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "title": "Response message for Getting market data for a question",
+      "type": "object"
+    },
+    "pugsvcGetOrderDetailsRequest": {
+      "properties": {
+        "orderId": {
+          "type": "string"
+        }
+      },
+      "title": "Request message for Order Details",
+      "type": "object"
+    },
+    "pugsvcGetOrderDetailsResponse": {
+      "properties": {
+        "orderDetails": {
+          "$ref": "#/definitions/pugsvcOrderInfo"
+        },
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "title": "Response message for Order Details",
+      "type": "object"
+    },
+    "pugsvcGetUnreadNotificationRequest": {
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/pugsvcNotificationStatusCdEnum"
+        }
+      },
+      "title": "Request message for getting the unread messages count",
+      "type": "object"
+    },
+    "pugsvcGetUnreadNotificationResponse": {
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        },
+        "unreadMsgCount": {
+          "format": "int64",
+          "type": "string"
+        }
+      },
+      "title": "Response message for getting the unread messages count",
+      "type": "object"
+    },
+    "pugsvcGroupActivityInfo": {
+      "properties": {
+        "didIPredict": {
+          "type": "boolean"
+        },
+        "entityId": {
+          "type": "string"
+        },
+        "eventDescription": {
+          "type": "string"
+        },
+        "eventLocation": {
+          "type": "string"
+        },
+        "eventName": {
+          "type": "string"
+        },
+        "eventShortName": {
+          "type": "string"
+        },
+        "eventStartDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "marketDataDetailCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "marketDataDetails": {
+          "items": {
+            "$ref": "#/definitions/typesMarketDataDetail",
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "predictedMembersCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "questionActiveUsers": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "questionDescription": {
+          "type": "string"
+        },
+        "questionId": {
+          "type": "string"
+        },
+        "questionOptions": {
+          "type": "string"
+        },
+        "questionPredictedMembers": {
+          "items": {
+            "$ref": "#/definitions/pugsvcGroupUserInfo",
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "questionProbability": {
+          "type": "string"
+        },
+        "questionType": {
+          "$ref": "#/definitions/pugsvcQuestionTypeEnum"
+        },
+        "questionVolume": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcGroupCancelInviteRequest": {
+      "properties": {
+        "emailId": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "groupId": {
+          "title": "Group to be removed from",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcGroupCancelInviteResponse": {
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "title": "Response after removing the users from the group",
+      "type": "object"
+    },
+    "pugsvcGroupInfo": {
+      "properties": {
+        "groupAlias": {
+          "type": "string"
+        },
+        "groupId": {
+          "type": "string"
+        },
+        "groupMode": {
+          "$ref": "#/definitions/pugsvcGroupModeEnum"
+        },
+        "groupName": {
+          "type": "string"
+        },
+        "groupStatus": {
+          "$ref": "#/definitions/pugsvcGroupStatusCdEnum"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcGroupInfoRequest": {
+      "properties": {
+        "groupId": {
+          "description": "Group to get information on.",
+          "type": "string"
+        },
+        "pageRequest": {
+          "$ref": "#/definitions/typesPageInfo"
+        }
+      },
+      "title": "Request message for Getting Group Information",
+      "type": "object"
+    },
+    "pugsvcGroupInfoResponse": {
+      "properties": {
+        "groupInfo": {
+          "$ref": "#/definitions/pugsvcGroupInfo"
+        },
+        "memberCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "members": {
+          "items": {
+            "$ref": "#/definitions/pugsvcGroupUserInfo",
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "pageInfo": {
+          "$ref": "#/definitions/typesMeta"
+        },
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "title": "Response message for Group Information",
+      "type": "object"
+    },
+    "pugsvcGroupInvitationStatusCdEnum": {
+      "default": "INVITATION_CREATED",
+      "enum": [
+        "INVITATION_CREATED",
+        "INVITATION_ACCEPTED"
+      ],
+      "type": "string"
+    },
+    "pugsvcGroupInviteRequest": {
+      "properties": {
+        "groupId": {
+          "type": "string"
+        },
+        "groupInvites": {
+          "items": {
+            "$ref": "#/definitions/pugsvcGroupInviteRequestInfo",
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "groupName": {
+          "description": "User is invited to join this group.",
+          "type": "string"
+        }
+      },
+      "title": "Group Invite Request message",
+      "type": "object"
+    },
+    "pugsvcGroupInviteRequestInfo": {
+      "properties": {
+        "eventType": {
+          "format": "int64",
+          "title": "User is invited for this event type, e.g Cricket, Soccer, Football etc",
+          "type": "integer"
+        },
+        "inviteeEmail": {
+          "title": "Invitee email",
+          "type": "string"
+        },
+        "inviteeName": {
+          "title": "Invitee user name",
+          "type": "string"
+        },
+        "userId": {
+          "description": "User creating the group invitation.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcGroupInviteResponse": {
+      "properties": {
+        "groupInviteResponseInfo": {
+          "items": {
+            "$ref": "#/definitions/pugsvcGroupInviteResponseInfo",
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "title": "Group Invite Response message",
+      "type": "object"
+    },
+    "pugsvcGroupInviteResponseInfo": {
+      "properties": {
+        "invitationId": {
+          "type": "string"
+        },
+        "invitationStatus": {
+          "$ref": "#/definitions/pugsvcGroupInvitationStatusCdEnum"
+        },
+        "inviteeEmail": {
+          "type": "string"
+        },
+        "inviteeName": {
+          "type": "string"
+        },
+        "inviteeUserId": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcGroupModeEnum": {
+      "default": "UNSPECIFIED",
+      "enum": [
+        "UNSPECIFIED",
+        "PUBLIC",
+        "PRIVATE"
+      ],
+      "title": "- UNSPECIFIED: Group Mode Unspecified\n - PUBLIC: Public group mode, any user can join without an invitation\n - PRIVATE: Private group mode, only invited users can join",
+      "type": "string"
+    },
+    "pugsvcGroupStatusCdEnum": {
+      "default": "GROUPSTATUS_UNSPECIFIED",
+      "enum": [
+        "GROUPSTATUS_UNSPECIFIED",
+        "GROUPSTATUS_ACTIVE",
+        "GROUPSTATUS_INACTIVE",
+        "GROUPSTATUS_SUSPENDED"
+      ],
+      "type": "string"
+    },
+    "pugsvcGroupUserInfo": {
+      "properties": {
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "userEmail": {
+          "type": "string"
+        },
+        "userId": {
+          "type": "string"
+        },
+        "userName": {
+          "type": "string"
+        },
+        "userRole": {
+          "$ref": "#/definitions/pugsvcGroupUserRoleCdEnum"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcGroupUserPredictionInfo": {
+      "properties": {
+        "accuracy": {
+          "type": "string"
+        },
+        "earnings": {
+          "type": "string"
+        },
+        "predictions": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "userInfo": {
+          "$ref": "#/definitions/pugsvcGroupUserInfo"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcGroupUserRoleCdEnum": {
+      "default": "GROUPUSERROLE_UNSPECIFIED",
+      "enum": [
+        "GROUPUSERROLE_UNSPECIFIED",
+        "GROUPUSERROLE_OWNER",
+        "GROUPUSERROLE_ADMIN",
+        "GROUPUSERROLE_OWNER_ADMIN",
+        "GROUPUSERROLE_MEMBER",
+        "GROUPUSERROLE_PENDING_MEMBER"
+      ],
+      "type": "string"
+    },
+    "pugsvcGroupUserSearchRequest": {
+      "description": "Request message for finding users based on their first name or last name or email.",
+      "properties": {
+        "groupId": {
+          "type": "string"
+        },
+        "pageRequest": {
+          "$ref": "#/definitions/typesPageInfo"
+        },
+        "wildCardSearch": {
+          "title": "Group to leave",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcGroupUserSearchResponse": {
+      "description": "Response message for finding users based on wild card search using First or last or email.",
+      "properties": {
+        "pageInfo": {
+          "$ref": "#/definitions/typesMeta"
+        },
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        },
+        "userCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "userInfo": {
+          "items": {
+            "$ref": "#/definitions/pugsvcGroupUserInfo",
+            "type": "object"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcKnowledgeVideoCategoryEnum": {
+      "default": "UNSPECIFIED",
+      "enum": [
+        "UNSPECIFIED",
+        "GENERAL"
+      ],
+      "type": "string"
+    },
+    "pugsvcKnowledgeVideoInfo": {
+      "properties": {
+        "category": {
+          "$ref": "#/definitions/pugsvcKnowledgeVideoCategoryEnum"
+        },
+        "description": {
+          "type": "string"
+        },
+        "sequence": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "title": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcLeaveGroupRequest": {
+      "properties": {
+        "groupId": {
+          "title": "Group to leave",
+          "type": "string"
+        },
+        "userId": {
+          "description": "User trying to leave the above group.",
+          "type": "string"
+        }
+      },
+      "title": "Request message for leaving a group",
+      "type": "object"
+    },
+    "pugsvcLeaveGroupResponse": {
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "title": "Response after leaving the group",
+      "type": "object"
+    },
+    "pugsvcListEventsRequest": {
+      "properties": {
+        "category": {
+          "$ref": "#/definitions/pugsvcEventCategoryEnum"
+        },
+        "endDate": {
+          "format": "int64",
+          "type": "string"
+        },
+        "eventHierarchy": {
+          "$ref": "#/definitions/pugsvcEventHierarchyEnum"
+        },
+        "eventSearchText": {
+          "type": "string"
+        },
+        "pageNumber": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "pageSize": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "parentEventId": {
+          "type": "string"
+        },
+        "startDate": {
+          "format": "int64",
+          "type": "string"
+        },
+        "status": {
+          "items": {
+            "$ref": "#/definitions/pugsvcEventStatusEnum"
+          },
+          "type": "array"
+        },
+        "subcategory": {
+          "type": "string"
+        },
+        "tags": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcListEventsResponse": {
+      "properties": {
+        "events": {
+          "items": {
+            "$ref": "#/definitions/pugsvcEvent",
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        },
+        "totalCount": {
+          "format": "int64",
+          "type": "integer"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcLoginRequest": {
+      "description": "Represents a request for user login using email and password.",
+      "properties": {
+        "emailLogin": {
+          "$ref": "#/definitions/pugsvcEmailLoginRequest",
+          "title": "Login with email and password"
+        },
+        "socialLogin": {
+          "$ref": "#/definitions/pugsvcSocialLoginRequest",
+          "title": "Login with Social account"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcLogoutRequest": {
+      "description": "Request to log out a user.",
+      "type": "object"
+    },
+    "pugsvcLogoutResponse": {
+      "description": "Response indicating success or failure of the logout request.",
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/typesStatus",
+          "title": "Status of the operation"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcMarkMessagesNotificationRequest": {
+      "properties": {
+        "notificationId": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "status": {
+          "$ref": "#/definitions/pugsvcNotificationStatusCdEnum"
+        }
+      },
+      "title": "Request message for marking notification messages to either Read/deleted/archived status in bulk",
+      "type": "object"
+    },
+    "pugsvcMarkMessagesNotificationResponse": {
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        },
+        "updatedMsgsCount": {
+          "format": "int64",
+          "type": "string"
+        }
+      },
+      "title": "Response message for marking notification messages",
+      "type": "object"
+    },
+    "pugsvcMarketDataInfo": {
+      "properties": {
+        "change": {
+          "type": "string"
+        },
+        "contracts": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "impliedProbability": {
+          "type": "string"
+        },
+        "investedAmount": {
+          "type": "string"
+        },
+        "outcome": {
+          "type": "string"
+        },
+        "prevCloseImpProbability": {
+          "type": "string"
+        },
+        "questionId": {
+          "type": "string"
+        },
+        "ticker": {
+          "type": "string"
+        },
+        "unmatchedInvAmount": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcMemberPredictionInfo": {
+      "properties": {
+        "lastActivity": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "userId": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcMoneyTransactionRequest": {
+      "properties": {
+        "activitySubType": {
+          "items": {
+            "$ref": "#/definitions/pugsvcActivitySubTypeCdEnum"
+          },
+          "type": "array"
+        },
+        "activityType": {
+          "items": {
+            "$ref": "#/definitions/pugsvcActivityTypeCdEnum"
+          },
+          "type": "array"
+        },
+        "endDate": {
+          "format": "uint64",
+          "type": "string"
+        },
+        "pageRequest": {
+          "$ref": "#/definitions/typesPageInfo"
+        },
+        "startDate": {
+          "format": "uint64",
+          "type": "string"
+        }
+      },
+      "title": "Request message for getting money transactions",
+      "type": "object"
+    },
+    "pugsvcMoneyTransactionResponse": {
+      "properties": {
+        "activities": {
+          "items": {
+            "$ref": "#/definitions/pugsvcActivityInfo",
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "activitiesCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "pageInfo": {
+          "$ref": "#/definitions/typesMeta"
+        },
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "title": "Response message for getting money transactions",
+      "type": "object"
+    },
+    "pugsvcNotificationInfo": {
+      "properties": {
+        "notificationEntityId": {
+          "type": "string"
+        },
+        "notificationId": {
+          "type": "string"
+        },
+        "notificationMessage": {
+          "type": "string"
+        },
+        "notificationMsgCreatedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "notificationStatus": {
+          "$ref": "#/definitions/pugsvcNotificationStatusCdEnum"
+        },
+        "notificationTitle": {
+          "type": "string"
+        },
+        "notificationUserId": {
+          "type": "string"
+        },
+        "notificcationEntityType": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcNotificationStatusCdEnum": {
+      "default": "NOTIFICATION_STATUS_UNSPECIFIED",
+      "enum": [
+        "NOTIFICATION_STATUS_UNSPECIFIED",
+        "NOTIFICATION_STATUS_UNREAD",
+        "NOTIFICATION_STATUS_READ",
+        "NOTIFICATION_STATUS_ARCHIVED",
+        "NOTIFICATION_STATUS_DELETED"
+      ],
+      "type": "string"
+    },
+    "pugsvcOrderInfo": {
+      "properties": {
+        "earnings": {
+          "type": "string"
+        },
+        "eventDescription": {
+          "type": "string"
+        },
+        "eventId": {
+          "type": "string"
+        },
+        "eventName": {
+          "type": "string"
+        },
+        "eventShortName": {
+          "type": "string"
+        },
+        "eventStartDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "eventStatus": {
+          "$ref": "#/definitions/pugsvcPredictionEventStatusCdEnum"
+        },
+        "investmentAmt": {
+          "type": "string"
+        },
+        "lastActivity": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "matchedAmt": {
+          "type": "string"
+        },
+        "orderId": {
+          "type": "string"
+        },
+        "orderStatus": {
+          "$ref": "#/definitions/pugsvcOrderStatusEnum"
+        },
+        "orderType": {
+          "$ref": "#/definitions/typesOrderTypeCdEnum"
+        },
+        "percentage": {
+          "type": "string"
+        },
+        "potentialReturns": {
+          "type": "string"
+        },
+        "predictedOutcome": {
+          "type": "string"
+        },
+        "predictedOutcomeChoice": {
+          "type": "string"
+        },
+        "predictionOutcome": {
+          "$ref": "#/definitions/pugsvcPredictionOutComeCdEnum"
+        },
+        "question": {
+          "type": "string"
+        },
+        "questionId": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcOrderStatusEnum": {
+      "default": "UNSPECIFIED",
+      "enum": [
+        "UNSPECIFIED",
+        "OPEN",
+        "PENDING",
+        "LIVE",
+        "CANCEL_REQUESTED",
+        "PARTIALLY_FILLED",
+        "FILLED",
+        "CANCELLED",
+        "REJECTED"
+      ],
+      "type": "string"
+    },
+    "pugsvcPhoneTypeEnum": {
+      "default": "PHONE_TYPE_UNSPECIFIED",
+      "enum": [
+        "PHONE_TYPE_UNSPECIFIED",
+        "PHONE_TYPE_MOBILE",
+        "PHONE_TYPE_HOME",
+        "PHONE_TYPE_WORK",
+        "PHONE_TYPE_OTHER"
+      ],
+      "type": "string"
+    },
+    "pugsvcPredictionAddRequest": {
+      "description": "Request message to add a prediction for a user.",
+      "properties": {
+        "eventId": {
+          "type": "string"
+        },
+        "investedAmount": {
+          "type": "string"
+        },
+        "matchId": {
+          "type": "string"
+        },
+        "matchedOutcome": {
+          "type": "string"
+        },
+        "matchedOutcomeChoice": {
+          "type": "string"
+        },
+        "matchedTime": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "orderId": {
+          "type": "string"
+        },
+        "percentage": {
+          "type": "string"
+        },
+        "predictedOutcome": {
+          "type": "string"
+        },
+        "predictedOutcomeChoice": {
+          "type": "string"
+        },
+        "predictionCost": {
+          "type": "string"
+        },
+        "predictionOutcome": {
+          "$ref": "#/definitions/pugsvcPredictionOutComeCdEnum"
+        },
+        "questionId": {
+          "type": "string"
+        },
+        "userId": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcPredictionAddResponse": {
+      "properties": {
+        "predictionId": {
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "title": "Response message for adding a prediction",
+      "type": "object"
+    },
+    "pugsvcPredictionDetails": {
+      "properties": {
+        "selectedPredictionChoice": {
+          "title": "This is for Yes/No type of predictions",
+          "type": "boolean"
+        },
+        "selectedPredictionOutcome": {
+          "title": "User's selected option (e.g., \"Team A Wins\")",
+          "type": "string"
+        }
+      },
+      "title": "Details of the prediction being bet on",
+      "type": "object"
+    },
+    "pugsvcPredictionEventStatusCdEnum": {
+      "default": "PREDICTION_EVENT_STATUS_UNSPECIFIED",
+      "enum": [
+        "PREDICTION_EVENT_STATUS_UNSPECIFIED",
+        "PREDICTION_EVENT_STATUS_UPCOMING",
+        "PREDICTION_EVENT_STATUS_ACTIVE",
+        "PREDICTION_EVENT_STATUS_CLOSED",
+        "PREDICTION_EVENT_STATUS_CANCELLED"
+      ],
+      "title": "- PREDICTION_EVENT_STATUS_UNSPECIFIED: Unspecified\n - PREDICTION_EVENT_STATUS_UPCOMING: Upcoming Event\n - PREDICTION_EVENT_STATUS_ACTIVE: Event is active currently\n - PREDICTION_EVENT_STATUS_CLOSED: Event is closed\n - PREDICTION_EVENT_STATUS_CANCELLED: Event is canceled",
+      "type": "string"
+    },
+    "pugsvcPredictionInfo": {
+      "properties": {
+        "earnings": {
+          "type": "string"
+        },
+        "eventDescription": {
+          "type": "string"
+        },
+        "eventId": {
+          "type": "string"
+        },
+        "eventName": {
+          "type": "string"
+        },
+        "eventResult": {
+          "type": "string"
+        },
+        "eventShortName": {
+          "type": "string"
+        },
+        "eventStartDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "eventStatus": {
+          "$ref": "#/definitions/pugsvcPredictionEventStatusCdEnum"
+        },
+        "exitPercentage": {
+          "type": "string"
+        },
+        "investmentAmt": {
+          "type": "string"
+        },
+        "lastActivity": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "matchedAmt": {
+          "type": "string"
+        },
+        "orderId": {
+          "type": "string"
+        },
+        "percentage": {
+          "type": "string"
+        },
+        "potentialReturns": {
+          "type": "string"
+        },
+        "predictedOutcome": {
+          "type": "string"
+        },
+        "predictedOutcomeChoice": {
+          "type": "string"
+        },
+        "predictionId": {
+          "type": "string"
+        },
+        "predictionOutcome": {
+          "$ref": "#/definitions/pugsvcPredictionOutComeCdEnum"
+        },
+        "predictionStatus": {
+          "$ref": "#/definitions/pugsvcPredictionStatusCdEnum"
+        },
+        "question": {
+          "type": "string"
+        },
+        "questionId": {
+          "type": "string"
+        },
+        "reservedAmt": {
+          "type": "string"
+        },
+        "type": {
+          "format": "int64",
+          "type": "integer"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcPredictionInfoByIdRequest": {
+      "properties": {
+        "predictionId": {
+          "type": "string"
+        }
+      },
+      "title": "Request message for Getting Prediction Information By ID",
+      "type": "object"
+    },
+    "pugsvcPredictionInfoByIdResponse": {
+      "properties": {
+        "prediction": {
+          "$ref": "#/definitions/pugsvcPredictionInfo"
+        },
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "title": "Response message for Group Information By ID",
+      "type": "object"
+    },
+    "pugsvcPredictionInfoByQuestionRequest": {
+      "properties": {
+        "questionId": {
+          "type": "string"
+        },
+        "timeInForce": {
+          "$ref": "#/definitions/pugsvcPredictionTimeInForceCdEnum"
+        },
+        "userId": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "title": "Request message for Getting prediction information by question",
+      "type": "object"
+    },
+    "pugsvcPredictionInfoByQuestionResponse": {
+      "properties": {
+        "memberPredictionCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "memberPredictions": {
+          "items": {
+            "$ref": "#/definitions/pugsvcMemberPredictionInfo",
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "myPredictions": {
+          "items": {
+            "$ref": "#/definitions/pugsvcPredictionInfo",
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "myPredictionsCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "title": "Response message for Getting prediction information by question",
+      "type": "object"
+    },
+    "pugsvcPredictionInfoRequest": {
+      "properties": {
+        "day": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "month": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "pageRequest": {
+          "$ref": "#/definitions/typesPageInfo"
+        },
+        "timeInForce": {
+          "$ref": "#/definitions/pugsvcPredictionTimeInForceCdEnum"
+        },
+        "year": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "title": "Request message for Getting Prediction Information",
+      "type": "object"
+    },
+    "pugsvcPredictionInfoResponse": {
+      "properties": {
+        "pageInfo": {
+          "$ref": "#/definitions/typesMeta"
+        },
+        "predictionCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "predictions": {
+          "items": {
+            "$ref": "#/definitions/pugsvcPredictionInfo",
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "title": "Response message for Group Information",
+      "type": "object"
+    },
+    "pugsvcPredictionModifiers": {
+      "properties": {
+        "creditDiscount": {
+          "title": "Discount applied to the bet in credits",
+          "type": "string"
+        },
+        "creditMarkup": {
+          "title": "Markup applied to the bet in credits",
+          "type": "string"
+        },
+        "percentage": {
+          "title": "Percentage for bet adjustments (e.g., profit percentage)",
+          "type": "string"
+        },
+        "updatedPercentage": {
+          "title": "Updated percentage for bet adjustments",
+          "type": "string"
+        }
+      },
+      "title": "Optional modifiers for the bet",
+      "type": "object"
+    },
+    "pugsvcPredictionOutComeCdEnum": {
+      "default": "PREDICTIONOUTCOME_UNSPECIFIED",
+      "enum": [
+        "PREDICTIONOUTCOME_UNSPECIFIED",
+        "PREDICTIONOUTCOME_PENDING",
+        "PREDICTIONOUTCOME_SUCCESS",
+        "PREDICTIONOUTCOME_FAILURE",
+        "PREDICTIONOUTCOME_VOID",
+        "PREDICTIONOUTCOME_NONE"
+      ],
+      "type": "string"
+    },
+    "pugsvcPredictionPerformance": {
+      "properties": {
+        "day": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "earnings": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcPredictionPerformanceRequest": {
+      "properties": {
+        "day": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "month": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "timeInForce": {
+          "$ref": "#/definitions/pugsvcPredictionTimeInForceCdEnum"
+        },
+        "year": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "title": "Request message for User Prediction Performance",
+      "type": "object"
+    },
+    "pugsvcPredictionPerformanceResponse": {
+      "properties": {
+        "performanceCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "performances": {
+          "items": {
+            "$ref": "#/definitions/pugsvcPredictionPerformance",
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "title": "Response message for User Prediction Performance",
+      "type": "object"
+    },
+    "pugsvcPredictionSearchRequest": {
+      "properties": {
+        "day": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "eventWildCardSearch": {
+          "title": "Search predictions",
+          "type": "string"
+        },
+        "month": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "pageRequest": {
+          "$ref": "#/definitions/typesPageInfo"
+        },
+        "timeInForce": {
+          "$ref": "#/definitions/pugsvcPredictionTimeInForceCdEnum"
+        },
+        "year": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "title": "Request message for Searching Prediction Information",
+      "type": "object"
+    },
+    "pugsvcPredictionSearchResponse": {
+      "properties": {
+        "pageInfo": {
+          "$ref": "#/definitions/typesMeta"
+        },
+        "predictionCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "predictions": {
+          "items": {
+            "$ref": "#/definitions/pugsvcPredictionInfo",
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "title": "Response message for Search Prediction",
+      "type": "object"
+    },
+    "pugsvcPredictionSettleRequest": {
+      "properties": {
+        "eventId": {
+          "type": "string"
+        },
+        "eventOutcome": {
+          "type": "string"
+        },
+        "eventOutcomeChoice": {
+          "type": "string"
+        },
+        "orderId": {
+          "type": "string"
+        },
+        "orderTypeCd": {
+          "$ref": "#/definitions/typesOrderTypeCdEnum"
+        },
+        "questionId": {
+          "type": "string"
+        },
+        "settlementTime": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "userId": {
+          "type": "string"
+        }
+      },
+      "title": "Request message for settling a prediction",
+      "type": "object"
+    },
+    "pugsvcPredictionSettleResponse": {
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "title": "Response message for settling a prediction",
+      "type": "object"
+    },
+    "pugsvcPredictionStatusCdEnum": {
+      "default": "PREDICTION_STATUS_UNSPECIFIED",
+      "enum": [
+        "PREDICTION_STATUS_UNSPECIFIED",
+        "PREDICTION_STATUS_ACCEPTED",
+        "PREDICTION_STATUS_MATCHED",
+        "PREDICTION_STATUS_SETTLED",
+        "PREDICTION_STATUS_CANCELLED",
+        "PREDICTION_STATUS_CANCEL_REQUESTED",
+        "PREDICTION_STATUS_EXITED",
+        "PREDICTION_STATUS_REJECTED"
+      ],
+      "title": "- PREDICTION_STATUS_UNSPECIFIED: Unspecified\n - PREDICTION_STATUS_ACCEPTED: Prediction Accepted\n - PREDICTION_STATUS_MATCHED: Prediction matched with other users.\n - PREDICTION_STATUS_SETTLED: Prediction Settled after the event is completed.\n - PREDICTION_STATUS_CANCELLED: Prediction Cancelled by the user.\n - PREDICTION_STATUS_CANCEL_REQUESTED: User requested a cancel on their prediction\n - PREDICTION_STATUS_EXITED: User exited from their prediction\n - PREDICTION_STATUS_REJECTED: User's prediction is Rejected from market",
+      "type": "string"
+    },
+    "pugsvcPredictionTimeInForceCdEnum": {
+      "default": "PREDICTIONTIMEINFORCE_UNSPECIFIED",
+      "enum": [
+        "PREDICTIONTIMEINFORCE_UNSPECIFIED",
+        "PREDICTIONTIMEINFORCE_LIVE",
+        "PREDICTIONTIMEINFORCE_COMPLETED_TODAY",
+        "PREDICTIONTIMEINFORCE_COMPLETED_YESTERDAY",
+        "PREDICTIONTIMEINFORCE_COMPLETED_LASTWEEK",
+        "PREDICTIONTIMEINFORCE_COMPLETED_LASTMONTH",
+        "PREDICTIONTIMEINFORCE_COMPLETED_ALLTIME",
+        "PREDICTIONTIMEINFORCE_COMPLETED_THISMONTH",
+        "PREDICTIONTIMEINFORCE_UPCOMING",
+        "PREDICTIONTIMEINFORCE_PENDING_LIVE",
+        "PREDICTIONTIMEINFORCE_CANCELLED",
+        "PREDICTIONTIMEINFORCE_EXITED"
+      ],
+      "type": "string"
+    },
+    "pugsvcPublishMarketDataRequest": {
+      "properties": {
+        "contracts": {
+          "type": "string"
+        },
+        "impliedProbability": {
+          "type": "string"
+        },
+        "investedAmount": {
+          "type": "string"
+        },
+        "outcome": {
+          "type": "string"
+        },
+        "questionId": {
+          "type": "string"
+        },
+        "ticker": {
+          "type": "string"
+        },
+        "unmathedInvAmount": {
+          "type": "string"
+        }
+      },
+      "title": "Request message for Publishing market data",
+      "type": "object"
+    },
+    "pugsvcPublishMarketDataResponse": {
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "title": "Response message for the created Activity",
+      "type": "object"
+    },
+    "pugsvcQuestion": {
+      "properties": {
+        "activity": {
+          "$ref": "#/definitions/typesQuestionActivity"
+        },
+        "description": {
+          "type": "string"
+        },
+        "endDate": {
+          "format": "int64",
+          "type": "string"
+        },
+        "liveAnswer": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "questionId": {
+          "type": "string"
+        },
+        "questionOptions": {
+          "type": "string"
+        },
+        "questionType": {
+          "$ref": "#/definitions/pugsvcQuestionTypeEnum"
+        },
+        "shortName": {
+          "type": "string"
+        },
+        "startDate": {
+          "format": "int64",
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/definitions/pugsvcQuestionStatusEnum"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcQuestionStatusEnum": {
+      "default": "QUESTION_STATUS_UNSPECIFIED",
+      "enum": [
+        "QUESTION_STATUS_UNSPECIFIED",
+        "QUESTION_STATUS_ACTIVE",
+        "QUESTION_STATUS_INACTIVE",
+        "QUESTION_STATUS_COMPLETED",
+        "QUESTION_STATUS_UPCOMING",
+        "QUESTION_STATUS_CANCELED"
+      ],
+      "type": "string"
+    },
+    "pugsvcQuestionTypeEnum": {
+      "default": "QUESTION_TYPE_UNSPECIFIED",
+      "enum": [
+        "QUESTION_TYPE_UNSPECIFIED",
+        "QUESTION_TYPE_BINARY",
+        "QUESTION_TYPE_MULTIPLE_CHOICE",
+        "QUESTION_TYPE_RANGE"
+      ],
+      "type": "string"
+    },
+    "pugsvcRecurringEvent": {
+      "properties": {
+        "category": {
+          "$ref": "#/definitions/pugsvcEventCategoryEnum",
+          "title": "Event Category"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "id": {
+          "title": "Unique id of the event",
+          "type": "string"
+        },
+        "metadata": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Addtional metadata related to teh event",
+          "type": "object"
+        },
+        "name": {
+          "title": "Name of the event",
+          "type": "string"
+        },
+        "shortName": {
+          "title": "Short name",
+          "type": "string"
+        },
+        "sportRecurringEvent": {
+          "$ref": "#/definitions/pugsvcSportRecurringEvent",
+          "title": "Sports based recurring event"
+        },
+        "tags": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Additional tags",
+          "type": "array"
+        }
+      },
+      "title": "Any type of Recurring event across all event categories",
+      "type": "object"
+    },
+    "pugsvcRefreshTokenRequest": {
+      "description": "Request to refresh an access token using a refresh token.",
+      "properties": {
+        "refreshToken": {
+          "title": "Refresh token",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcRefreshTokenResponse": {
+      "description": "Response containing new access and refresh tokens after refreshing.",
+      "properties": {
+        "accessToken": {
+          "title": "New access token",
+          "type": "string"
+        },
+        "refreshToken": {
+          "title": "New refresh token",
+          "type": "string"
+        },
+        "refreshTokenExpiry": {
+          "format": "date-time",
+          "title": "Expiry time for the new refresh token",
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/definitions/typesStatus",
+          "title": "Status of the operation"
+        },
+        "tokenExpiry": {
+          "format": "date-time",
+          "title": "Expiry time for the new access token",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcReleaseBalanceRequest": {
+      "properties": {
+        "releaseAmount": {
+          "type": "string"
+        }
+      },
+      "title": "Request for releasing an amount from user's balances",
+      "type": "object"
+    },
+    "pugsvcReleaseBalanceResponse": {
+      "properties": {
+        "newAvailableBalance": {
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "title": "Response for releasing an amount from user's balances",
+      "type": "object"
+    },
+    "pugsvcRemoveBalanceRequest": {
+      "title": "Request to remove balances of a user",
+      "type": "object"
+    },
+    "pugsvcRemoveBalanceResponse": {
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "title": "Response for remove balances of a user",
+      "type": "object"
+    },
+    "pugsvcRemoveGroupRequest": {
+      "properties": {
+        "groupId": {
+          "title": "Group to be removed from",
+          "type": "string"
+        },
+        "userId": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcRemoveGroupResponse": {
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "title": "Response after removing the users from the group",
+      "type": "object"
+    },
+    "pugsvcResendVerificationRequest": {
+      "description": "Request to resend a user's account one-time password.",
+      "properties": {
+        "scope": {
+          "$ref": "#/definitions/pugsvcUserOTPRequestScopeEnum"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcResendVerificationResponse": {
+      "description": "Response indicating success or failure of the resend verification request.",
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/typesStatus",
+          "title": "Status of the operation"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcReserveBalanceRequest": {
+      "properties": {
+        "reserveAmount": {
+          "type": "string"
+        }
+      },
+      "title": "Request for reserving an amount in user's balances",
+      "type": "object"
+    },
+    "pugsvcReserveBalanceResponse": {
+      "properties": {
+        "newAvailableBalance": {
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "title": "Response for reserving an amount in user's balances",
+      "type": "object"
+    },
+    "pugsvcResetBalanceRequest": {
+      "properties": {
+        "resetAmount": {
+          "type": "string"
+        }
+      },
+      "title": "Request for resetting user's balances",
+      "type": "object"
+    },
+    "pugsvcResetBalanceResponse": {
+      "properties": {
+        "newAvailableBalance": {
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "title": "Response for resetting user's balances",
+      "type": "object"
+    },
+    "pugsvcResetPasswordRequest": {
+      "description": "Request to reset a user's password.",
+      "properties": {
+        "newPassword": {
+          "title": "New password for the user",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcResetPasswordResponse": {
+      "description": "Response indicating success or failure of the reset password request.",
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/typesStatus",
+          "title": "Status of the operation"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcRewardCategoryTypeEnum": {
+      "default": "REWARDCATEGORY_TYPE_UNSPECIFIED",
+      "enum": [
+        "REWARDCATEGORY_TYPE_UNSPECIFIED",
+        "REWARDCATEGORY_TYPE_LOGIN",
+        "REWARDCATEGORY_TYPE_PREDICTIONSTREAK"
+      ],
+      "title": "- REWARDCATEGORY_TYPE_UNSPECIFIED: Type is not specified\n - REWARDCATEGORY_TYPE_LOGIN: Login rewards\n - REWARDCATEGORY_TYPE_PREDICTIONSTREAK: Prediction streak",
+      "type": "string"
+    },
+    "pugsvcRewardInfo": {
+      "description": "Represents a reward category.",
+      "properties": {
+        "categoryType": {
+          "$ref": "#/definitions/pugsvcRewardCategoryTypeEnum",
+          "title": "Type of reward category"
+        },
+        "lastRewardedAt": {
+          "format": "uint64",
+          "title": "Timestamp of the last reward",
+          "type": "string"
+        },
+        "multiplierInfo": {
+          "$ref": "#/definitions/pugsvcRewardMutliplierInfo",
+          "title": "Information about the reward multiplier"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcRewardMutliplierInfo": {
+      "properties": {
+        "baseAmt": {
+          "type": "string"
+        },
+        "multiplier": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcRewardsInfoRequest": {
+      "description": "Request to get reward categories and rewards information.",
+      "type": "object"
+    },
+    "pugsvcRewardsInfoResponse": {
+      "description": "Response containing reward categories and rewards information.",
+      "properties": {
+        "rewards": {
+          "items": {
+            "$ref": "#/definitions/pugsvcRewardInfo",
+            "type": "object"
+          },
+          "title": "List of reward categories",
+          "type": "array"
+        },
+        "status": {
+          "$ref": "#/definitions/typesStatus",
+          "title": "Status of the operation"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcSearchEventQuestionRequest": {
+      "properties": {
+        "eventId": {
+          "type": "string"
+        },
+        "pageRequest": {
+          "$ref": "#/definitions/typesPageInfo"
+        },
+        "questionWildCardSearch": {
+          "title": "Search predictions",
+          "type": "string"
+        }
+      },
+      "title": "Request message for Searching questions of an event",
+      "type": "object"
+    },
+    "pugsvcSearchEventQuestionResponse": {
+      "properties": {
+        "eventId": {
+          "type": "string"
+        },
+        "pageInfo": {
+          "$ref": "#/definitions/typesMeta"
+        },
+        "questionCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "questions": {
+          "items": {
+            "$ref": "#/definitions/pugsvcQuestion",
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "title": "Response message for Search Prediction",
+      "type": "object"
+    },
+    "pugsvcSendTradeMsgRequest": {
+      "properties": {
+        "tradeMsgs": {
+          "items": {
+            "$ref": "#/definitions/pugsvcTradeMsg",
+            "type": "object"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcSendTradeMsgResponse": {
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcShareContentRequest": {
+      "properties": {
+        "contentType": {
+          "$ref": "#/definitions/pugsvcShareContentTypeEnum"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcShareContentResponse": {
+      "properties": {
+        "shareText": {
+          "type": "string"
+        },
+        "shareUrl": {
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcShareContentTypeEnum": {
+      "default": "SHARECONTENT_TYPE_UNSPECIFIED",
+      "enum": [
+        "SHARECONTENT_TYPE_UNSPECIFIED",
+        "SHARECONTENT_TYPE_APPSHARE"
+      ],
+      "title": "- SHARECONTENT_TYPE_UNSPECIFIED: Type is not specified",
+      "type": "string"
+    },
+    "pugsvcSignUpRequest": {
+      "description": "Request to sign up a new user using email and password.",
+      "properties": {
+        "dateOfBirth": {
+          "$ref": "#/definitions/typeDate"
+        },
+        "email": {
+          "title": "User's email address",
+          "type": "string"
+        },
+        "emailSignup": {
+          "$ref": "#/definitions/pugsvcEmailSignupRequest",
+          "title": "Sign up with email and password"
+        },
+        "firstName": {
+          "title": "User's first name",
+          "type": "string"
+        },
+        "lastName": {
+          "title": "User's last name",
+          "type": "string"
+        },
+        "socialSignup": {
+          "$ref": "#/definitions/pugsvcSocialSignupRequest",
+          "title": "Sign up with Google account"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcSocialLoginRequest": {
+      "description": "Request to log in using a Google token.",
+      "properties": {
+        "platform": {
+          "$ref": "#/definitions/pugsvcSocialPlatformEnum"
+        },
+        "token": {
+          "title": "Social authentication token",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcSocialPlatformEnum": {
+      "default": "UNSPECIFIED",
+      "enum": [
+        "UNSPECIFIED",
+        "GOOGLE",
+        "APPLE"
+      ],
+      "type": "string"
+    },
+    "pugsvcSocialSignupRequest": {
+      "description": "Request to sign up a new user using Google.",
+      "properties": {
+        "platform": {
+          "$ref": "#/definitions/pugsvcSocialPlatformEnum"
+        },
+        "token": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcSportEvent": {
+      "properties": {
+        "eventId": {
+          "type": "string"
+        },
+        "eventName": {
+          "type": "string"
+        },
+        "eventStatus": {
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcSportEventTypeEnum": {
+      "default": "SPORT_EVENT_UNSPECIFIED",
+      "enum": [
+        "SPORT_EVENT_UNSPECIFIED",
+        "SPORT_EVENT_TOURNAMENT",
+        "SPORT_EVENT_MATCH"
+      ],
+      "title": "- SPORT_EVENT_UNSPECIFIED: Unspecified\n - SPORT_EVENT_TOURNAMENT: Tournament like World up 2025\n - SPORT_EVENT_MATCH: Matches inside a tournament",
+      "type": "string"
+    },
+    "pugsvcSportRecurringEvent": {
+      "properties": {
+        "cricketRecurringEvent": {
+          "$ref": "#/definitions/pugsvcCricketRecurringEvent",
+          "title": "Cricket Recurring Event"
+        },
+        "sportType": {
+          "$ref": "#/definitions/pugsvcSportType",
+          "title": "Sport Type"
+        }
+      },
+      "title": "Sports based recurring event",
+      "type": "object"
+    },
+    "pugsvcSportType": {
+      "title": "Specific sport types",
+      "type": "object"
+    },
+    "pugsvcSportTypeEnum": {
+      "default": "SPORT_TYPE_UNSPECIFIED",
+      "enum": [
+        "SPORT_TYPE_UNSPECIFIED",
+        "SPORT_TYPE_CRICKET"
+      ],
+      "title": "- SPORT_TYPE_UNSPECIFIED: Unspecified\n - SPORT_TYPE_CRICKET: Cricket",
+      "type": "string"
+    },
+    "pugsvcSportsEvent": {
+      "properties": {
+        "cricketEvent": {
+          "$ref": "#/definitions/pugsvcCricketEvent",
+          "title": "Cricket specific event info"
+        },
+        "gender": {
+          "$ref": "#/definitions/pugsvcGenderEnum",
+          "title": "Gender"
+        },
+        "sportEventType": {
+          "$ref": "#/definitions/pugsvcSportEventTypeEnum",
+          "title": "Sport Event Type. For eg. Tournament, Match"
+        },
+        "sportType": {
+          "$ref": "#/definitions/pugsvcSportTypeEnum",
+          "title": "Sports Type"
+        },
+        "teams": {
+          "items": {
+            "$ref": "#/definitions/pugsvcSportsTeam",
+            "type": "object"
+          },
+          "title": "Teams",
+          "type": "array"
+        }
+      },
+      "title": "Specific event information related to Sports",
+      "type": "object"
+    },
+    "pugsvcSportsTeam": {
+      "properties": {
+        "country": {
+          "$ref": "#/definitions/pugsvcEventLocation",
+          "title": "Country information"
+        },
+        "cricketTeam": {
+          "$ref": "#/definitions/pugsvcCricketTeam",
+          "title": "Cricket based team information"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "id": {
+          "title": "Id of the team",
+          "type": "string"
+        },
+        "imageUrl": {
+          "title": "Flag information",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name of team",
+          "type": "string"
+        },
+        "shortName": {
+          "title": "Short name of team",
+          "type": "string"
+        }
+      },
+      "title": "Cricket Team",
+      "type": "object"
+    },
+    "pugsvcStoreDeviceInfoRequest": {
+      "properties": {
+        "deviceInfo": {
+          "$ref": "#/definitions/typesDeviceInfo"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcStoreDeviceInfoResponse": {
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcStreamEventDetailsRequest": {
+      "properties": {
+        "action": {
+          "$ref": "#/definitions/pugsvcStreamEventInfoActionEnum"
+        },
+        "eventId": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcStreamEventDetailsResponse": {
+      "properties": {
+        "event": {
+          "$ref": "#/definitions/pugsvcEvent"
+        },
+        "message": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcStreamEventInfoActionEnum": {
+      "default": "UNSPECIFIED",
+      "enum": [
+        "UNSPECIFIED",
+        "ADD",
+        "DELETE"
+      ],
+      "type": "string"
+    },
+    "pugsvcStreamEventInfoRequest": {
+      "properties": {
+        "eventInfo": {
+          "items": {
+            "$ref": "#/definitions/pugsvcStreamEventDetailsRequest",
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "questionInfo": {
+          "items": {
+            "$ref": "#/definitions/pugsvcStreamQuestionDetailsRequest",
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "userId": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcStreamEventInfoResponse": {
+      "properties": {
+        "eventInfo": {
+          "items": {
+            "$ref": "#/definitions/pugsvcStreamEventDetailsResponse",
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "message": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "questionInfo": {
+          "items": {
+            "$ref": "#/definitions/pugsvcStreamQuestionDetailsResponse",
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcStreamQuestionDetailsRequest": {
+      "properties": {
+        "action": {
+          "$ref": "#/definitions/pugsvcStreamEventInfoActionEnum"
+        },
+        "questionId": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcStreamQuestionDetailsResponse": {
+      "properties": {
+        "marketDataDetails": {
+          "items": {
+            "$ref": "#/definitions/pugsvcMarketDataInfo",
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "marketDataOnly": {
+          "type": "boolean"
+        },
+        "message": {
+          "type": "string"
+        },
+        "question": {
+          "$ref": "#/definitions/pugsvcQuestion"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcTradeMsg": {
+      "properties": {
+        "amount": {
+          "type": "string"
+        },
+        "creditOnExit": {
+          "type": "string"
+        },
+        "debitOnExit": {
+          "type": "string"
+        },
+        "eventId": {
+          "type": "string"
+        },
+        "exitOrderId": {
+          "type": "string"
+        },
+        "matchedPredictionDetails": {
+          "$ref": "#/definitions/pugsvcPredictionDetails"
+        },
+        "orderId": {
+          "type": "string"
+        },
+        "orderStatus": {
+          "$ref": "#/definitions/pugsvcOrderStatusEnum"
+        },
+        "orderType": {
+          "$ref": "#/definitions/typesOrderTypeCdEnum"
+        },
+        "questionId": {
+          "type": "string"
+        },
+        "tradeMsgId": {
+          "type": "string"
+        },
+        "transactionId": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcUpdateBalanceRequest": {
+      "properties": {
+        "balanceAmount": {
+          "type": "string"
+        },
+        "creditDebit": {
+          "$ref": "#/definitions/pugsvcCreditDebitCdEnum"
+        },
+        "reserveAmount": {
+          "type": "string"
+        }
+      },
+      "title": "Request for updating a user's balance with given information",
+      "type": "object"
+    },
+    "pugsvcUpdateBalanceResponse": {
+      "properties": {
+        "newAvailableBalance": {
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "title": "Response for updating a user's balances",
+      "type": "object"
+    },
+    "pugsvcUpdateEmailRequest": {
+      "properties": {
+        "email": {
+          "title": "New email address",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcUpdateEmailResponse": {
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/typesStatus",
+          "title": "Status of the operation"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcUpdateGroupRequest": {
+      "properties": {
+        "groupId": {
+          "title": "Group to leave",
+          "type": "string"
+        },
+        "groupName": {
+          "title": "New group name",
+          "type": "string"
+        },
+        "nickName": {
+          "title": "New Nick name",
+          "type": "string"
+        }
+      },
+      "title": "Request message for updating group information\nBy the owner",
+      "type": "object"
+    },
+    "pugsvcUpdateGroupResponse": {
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "title": "Response after leaving the group",
+      "type": "object"
+    },
+    "pugsvcUpdateNotificationRequest": {
+      "properties": {
+        "notificationId": {
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/definitions/pugsvcNotificationStatusCdEnum"
+        }
+      },
+      "title": "Request message for updating a notification message",
+      "type": "object"
+    },
+    "pugsvcUpdateNotificationResponse": {
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        }
+      },
+      "title": "Response message for updating a notification message",
+      "type": "object"
+    },
+    "pugsvcUserEditInfoRequest": {
+      "properties": {
+        "firstName": {
+          "title": "User's first name",
+          "type": "string"
+        },
+        "lastName": {
+          "title": "User's last name",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcUserEditInfoResponse": {
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        },
+        "userInfo": {
+          "$ref": "#/definitions/pugsvcUserInfo"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcUserGetInfoRequest": {
+      "title": "Request to get user information",
+      "type": "object"
+    },
+    "pugsvcUserGetInfoResponse": {
+      "description": "Response containing user information.",
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/typesStatus",
+          "title": "Status of the operation"
+        },
+        "userInfo": {
+          "$ref": "#/definitions/pugsvcUserInfo",
+          "title": "Information about the user"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcUserGroupInfo": {
+      "properties": {
+        "groupInfo": {
+          "$ref": "#/definitions/pugsvcGroupInfo"
+        },
+        "groupLastActivity": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "topFirstName": {
+          "type": "string"
+        },
+        "topLastName": {
+          "type": "string"
+        },
+        "topTotalEarnings": {
+          "type": "string"
+        },
+        "topUserId": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcUserGroupInfoRequest": {
+      "properties": {
+        "pageRequest": {
+          "$ref": "#/definitions/typesPageInfo"
+        }
+      },
+      "title": "Request message for Getting Groups Information for a User",
+      "type": "object"
+    },
+    "pugsvcUserGroupInfoResponse": {
+      "properties": {
+        "pageInfo": {
+          "$ref": "#/definitions/typesMeta"
+        },
+        "status": {
+          "$ref": "#/definitions/typesStatus"
+        },
+        "userGroupCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "userGroupInfo": {
+          "items": {
+            "$ref": "#/definitions/pugsvcUserGroupInfo",
+            "type": "object"
+          },
+          "type": "array"
+        }
+      },
+      "title": "Response message for Group Information for a user",
+      "type": "object"
+    },
+    "pugsvcUserInfo": {
+      "description": "Represents user information.",
+      "properties": {
+        "dateOfBirth": {
+          "$ref": "#/definitions/typeDate",
+          "title": "Date of birth of the user"
+        },
+        "email": {
+          "title": "Email address of the user",
+          "type": "string"
+        },
+        "firstName": {
+          "title": "First name of the user",
+          "type": "string"
+        },
+        "isMaskedEmail": {
+          "title": "Indicates if the email is masked",
+          "type": "boolean"
+        },
+        "lastName": {
+          "title": "Last name of the user",
+          "type": "string"
+        },
+        "userStatus": {
+          "$ref": "#/definitions/pugsvcUserStatusEnum",
+          "title": "Current status of the user account"
+        },
+        "username": {
+          "title": "Username of the user",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcUserLoginProfile": {
+      "description": "Represents a login profile for a user.",
+      "properties": {
+        "email": {
+          "title": "Email address of the user",
+          "type": "string"
+        },
+        "firstName": {
+          "title": "First name of the user",
+          "type": "string"
+        },
+        "lastName": {
+          "title": "Last name of the user",
+          "type": "string"
+        },
+        "userName": {
+          "title": "Username of the user",
+          "type": "string"
+        },
+        "userStatus": {
+          "$ref": "#/definitions/pugsvcUserStatusEnum",
+          "title": "Current status of the user account"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcUserOTPRequestScopeEnum": {
+      "default": "UNSPECIFIED",
+      "enum": [
+        "UNSPECIFIED",
+        "ACCT_ACTIVATION",
+        "PWD_RESET",
+        "EMAIL_VERIFICATION"
+      ],
+      "type": "string"
+    },
+    "pugsvcUserStatusEnum": {
+      "default": "UNSPECIFIED",
+      "enum": [
+        "UNSPECIFIED",
+        "CREATED",
+        "PENDING_ACTIVATION",
+        "PENDING_PASSWORDUPDATE",
+        "ACTIVE",
+        "INACTIVE",
+        "DISABLED",
+        "DISABLE_REQUESTED"
+      ],
+      "title": "- UNSPECIFIED: Status is not specified\n - CREATED: User account created but not activated yet\n - PENDING_ACTIVATION: User account pending activation\n - PENDING_PASSWORDUPDATE: User account pending password update\n - ACTIVE: User account is active and valid\n - INACTIVE: User account is inactive\n - DISABLED: User account is disabled\n - DISABLE_REQUESTED: User account is disable requested",
+      "type": "string"
+    },
+    "pugsvcVerifyUserRequest": {
+      "description": "Request to verify a user's account using a one-time password.",
+      "properties": {
+        "oneTimePassword": {
+          "title": "One-time password for verification",
+          "type": "string"
+        },
+        "scope": {
+          "$ref": "#/definitions/pugsvcUserOTPRequestScopeEnum",
+          "title": "Scope One-time password for verification"
+        }
+      },
+      "type": "object"
+    },
+    "pugsvcVerifyUserResponse": {
+      "description": "Response indicating success or failure of the verification request.",
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/typesStatus",
+          "title": "Status of the operation"
+        }
+      },
+      "type": "object"
+    },
+    "typeDate": {
+      "description": "* A full date, with non-zero year, month, and day values\n* A month and day value, with a zero year, such as an anniversary\n* A year on its own, with zero month and day values\n* A year and month value, with a zero day, such as a credit card expiration\ndate\n\nRelated types are [google.type.TimeOfDay][google.type.TimeOfDay] and\n`google.protobuf.Timestamp`.",
+      "properties": {
+        "day": {
+          "description": "Day of a month. Must be from 1 to 31 and valid for the year and month, or 0\nto specify a year by itself or a year and month where the day isn't\nsignificant.",
+          "format": "int32",
+          "type": "integer"
+        },
+        "month": {
+          "description": "Month of a year. Must be from 1 to 12, or 0 to specify a year without a\nmonth and day.",
+          "format": "int32",
+          "type": "integer"
+        },
+        "year": {
+          "description": "Year of the date. Must be from 1 to 9999, or 0 to specify a date without\na year.",
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "title": "Represents a whole or partial calendar date, such as a birthday. The time of\nday and time zone are either specified elsewhere or are insignificant. The\ndate is relative to the Gregorian Calendar. This can represent one of the\nfollowing:",
+      "type": "object"
+    },
+    "typesAppVersionInfo": {
+      "properties": {
+        "latestAppVersion": {
+          "type": "string"
+        },
+        "latestAppVersionReleaseDate": {
+          "format": "uint64",
+          "title": "Release date of the latest app version in epoch time seconds",
+          "type": "string"
+        },
+        "minAppVersion": {
+          "type": "string"
+        },
+        "minAppVersionReleaseDate": {
+          "format": "uint64",
+          "title": "Release date of the minimum app version in epoch time seconds",
+          "type": "string"
+        },
+        "os": {
+          "$ref": "#/definitions/typesDeviceOSypeEnum"
+        }
+      },
+      "type": "object"
+    },
+    "typesDeviceInfo": {
+      "description": "Represents device information.",
+      "properties": {
+        "appVersion": {
+          "title": "Version of the application",
+          "type": "string"
+        },
+        "deviceId": {
+          "title": "Unique identifier of the device",
+          "type": "string"
+        },
+        "deviceModel": {
+          "title": "Model of the device",
+          "type": "string"
+        },
+        "deviceToken": {
+          "title": "Token of the device",
+          "type": "string"
+        },
+        "os": {
+          "$ref": "#/definitions/typesDeviceOSypeEnum",
+          "title": "Operating system of the device"
+        },
+        "osVersion": {
+          "title": "Version of the operating system",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "typesDeviceOSypeEnum": {
+      "default": "UNSPECIFIED",
+      "enum": [
+        "UNSPECIFIED",
+        "ANDROID",
+        "IOS"
+      ],
+      "title": "- UNSPECIFIED: Device type is not specified\n - ANDROID: Android device\n - IOS: iOS device",
+      "type": "string"
+    },
+    "typesMarketDataDetail": {
+      "properties": {
+        "contracts": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "impliedProbability": {
+          "type": "string"
+        },
+        "investedAmount": {
+          "type": "string"
+        },
+        "outcome": {
+          "type": "string"
+        },
+        "unmatchedInvAmount": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "typesMeta": {
+      "properties": {
+        "currentPage": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "pageSize": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "totalPages": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "totalRecords": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "title": "Pagination structure details",
+      "type": "object"
+    },
+    "typesOrderTypeCdEnum": {
+      "default": "UNKNOWN",
+      "enum": [
+        "UNKNOWN",
+        "NEW_PREDICTION",
+        "EXIT_PREDICTION"
+      ],
+      "type": "string"
+    },
+    "typesPageInfo": {
+      "properties": {
+        "pageNumber": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "pageSize": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "type": "object"
+    },
+    "typesQuestionActivity": {
+      "properties": {
+        "marketDataDetailCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "marketDataDetails": {
+          "items": {
+            "$ref": "#/definitions/typesMarketDataDetail",
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "questionProbability": {
+          "type": "string"
+        },
+        "questionUsers": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "questionVolume": {
+          "format": "uint64",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "typesStatus": {
+      "description": "Represents a general status of an operation.",
+      "properties": {
+        "details": {
+          "items": {
+            "$ref": "#/definitions/typesStatusDetails",
+            "type": "object"
+          },
+          "title": "List of detailed status messages",
+          "type": "array"
+        },
+        "type": {
+          "$ref": "#/definitions/typesStatusTypeEnum",
+          "title": "Overall status type"
+        }
+      },
+      "type": "object"
+    },
+    "typesStatusDetails": {
+      "description": "Represents detailed status information.",
+      "properties": {
+        "code": {
+          "format": "uint64",
+          "title": "Error or warning code",
+          "type": "string"
+        },
+        "message": {
+          "title": "Detailed message about the status",
+          "type": "string"
+        },
+        "type": {
+          "$ref": "#/definitions/typesStatusTypeEnum",
+          "title": "Type of the status"
+        }
+      },
+      "type": "object"
+    },
+    "typesStatusTypeEnum": {
+      "default": "SUCCESS",
+      "enum": [
+        "SUCCESS",
+        "WARN",
+        "ERROR"
+      ],
+      "title": "- SUCCESS: Operation succeeded\n - WARN: Operation completed with warnings\n - ERROR: Operation encountered errors",
+      "type": "string"
+    }
+  },
+  "components": {},
+  "securityDefinitions": {
+    "Bearer": {
+      "description": "Enter JWT Bearer token",
+      "in": "header",
+      "name": "Authorization",
+      "type": "apiKey"
+    }
+  },
+  "security": [
+    {
+      "Bearer": []
+    },
+    {
+      "Bearer": []
+    },
+    {
+      "Bearer": []
+    }
+  ]
+}
