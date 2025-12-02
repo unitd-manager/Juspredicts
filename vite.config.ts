@@ -12,7 +12,7 @@ export default defineConfig(({ mode }) => ({
       "/api": {
         target: "https://api.predictyourgame.com",
         changeOrigin: true,
-        secure: true,
+        secure: false,
         rewrite: (path) => path.replace(/^\/api/, ""),
       },
     },

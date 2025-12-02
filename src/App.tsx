@@ -12,6 +12,8 @@ import Portfolio from "./pages/Portfolio.tsx";
 import About from "./pages/About";
 import ClanList from "./pages/ClanList";
 import ClanDetail from "./pages/ClanDetail";
+import Profile from "./pages/Profile";
+import ContactUs from "./pages/ContactUs";
 import GameDetailPage from "./pages/GameDetailPage.tsx";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
 
@@ -34,6 +36,8 @@ const App = () => (
             <Route path="/about" element={<About />} />
             <Route path="/clan" element={<ClanList />} />
             <Route path="/clan/:groupId" element={<ClanDetail />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/contact" element={<ContactUs />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
